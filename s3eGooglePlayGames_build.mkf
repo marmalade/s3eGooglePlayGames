@@ -1,0 +1,105 @@
+# mkf file for building extension s3eGooglePlayGames.
+# NOTE: This file was originally written by the extension builder, but will not
+# be overwritten (unless --force is specified) and is intended to be modified.
+display_name "Extensions/s3eGooglePlayGames"
+
+includepath source/h
+includepath h
+
+defines
+{
+    #Define the verbose channel to be off by default (but controllable by icf)
+    IW_TRACE_CHANNEL_GOOGLEPLAYGAMES_VERBOSE=2
+
+    #This macro indicates that this extension is being built
+    S3E_EXT_GOOGLEPLAYGAMES
+}
+
+#This command re-generates the relevant source files from the s4e when
+#the mkb is run
+extension
+{
+    ("$MARMALADE_ROOT/s3e/edk/builder")
+    "edk_build s3eGooglePlayGames.s4e"
+}
+
+#include the extension builder subproject
+subproject "$MARMALADE_ROOT/s3e/edk"
+
+if {{defined I3D_OS_IPHONE}}
+{
+    files
+    {
+        ["source"]
+        (use_first_found, source/iphone, source/generic)
+        s3eGooglePlayGames_platform.mm
+        #Add any iphone-specific files here
+    }
+}
+
+if {{defined I3D_OS_WINDOWS}}
+{
+    files
+    {
+        ["source"]
+        (use_first_found, source/windows, source/generic)
+        s3eGooglePlayGames_platform.cpp
+        #Add any windows-specific files here
+    }
+}
+
+if {{defined S3E_ANDROID}}
+{
+    files
+    {
+        ["source"]
+        (use_first_found, source/android, source/generic)
+        s3eGooglePlayGames_platform.cpp
+        #Add any android-specific files here
+    }
+}
+
+if {{defined I3D_OS_OSX}}
+{
+    files
+    {
+        ["source"]
+        (use_first_found, source/osx, source/generic)
+        s3eGooglePlayGames_platform.mm
+        #Add any osx-specific files here
+    }
+}
+
+if {{defined I3D_OS_LINUX and not defined S3E_ANDROID}}
+{
+    files
+    {
+        ["source"]
+        (use_first_found, source/linux, source/generic)
+        s3eGooglePlayGames_platform.cpp
+        #Add any linux-specific files here
+    }
+}
+
+files
+{
+
+    # Add any platform-independent files here
+    # Note that if the file exists in the platform-specific directory
+    # it will be taken from there instead of 'generic'
+    s3eGooglePlayGames_register.cpp
+    s3eGooglePlayGames.cpp
+
+    ["h"]
+    (source/h)
+    s3eGooglePlayGames_internal.h
+    s3eGooglePlayGames_autodefs.h
+
+    ["docs"]
+    (interface)
+    s3eGooglePlayGames.defines.txt
+
+    []
+    (.)
+    s3eGooglePlayGames.s4e
+}

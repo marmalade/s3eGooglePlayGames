@@ -1,0 +1,29 @@
+#!/usr/bin/env mkb
+
+subprojects
+{
+    iwnui
+    ../s3eGooglePlayGames.mkf
+}
+
+files 
+{
+	s3eGooglePlayGamesExample.cpp
+	ExampleUI.cpp
+}
+
+#### AUTO GENERATED deployment settings from DeployTool.exe. Do not edit below this line ####
+deployments
+{
+	["Default"]
+	android-aliasname='s3eGooglePlayGames'
+	android-custom-activity='com.ideaworks3d.marmalade.s3egoogleplaygames.s3eGooglePlayGamesActivity'
+	android-external-res='res/'
+	android-keypass='s3eGooglePlayGames'
+	android-keystore='keys/s3eGooglePlayGames.keystore'
+	android-manifest='AndroidManifest.xml'
+	android-pkgname='com.chromativity.googleplaytest'
+	android-storepass='s3eGooglePlayGames'
+	version-major=1
+	version-minor=1
+}

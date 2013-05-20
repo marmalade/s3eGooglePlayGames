@@ -1,0 +1,21 @@
+#!/usr/bin/env mkb
+# Builder mkb file for the java portion of the s3eGooglePlayGames extension on android
+platform JAVA
+
+files
+{
+    (source/android)
+    s3eGooglePlayGames.java
+	s3eGooglePlayGamesActivity.java
+    GameHelper.java
+    BaseGameActivity.java
+    R.java
+	BuildConfig.java
+}
+
+librarypath "$MARMALADE_ROOT/s3e/deploy/plugins/android/android.jar"
+librarypath "$MARMALADE_ROOT/s3e/loader/android/s3e_release.jar"
+librarypath "lib/android/google-play-services.jar"
+librarypath "lib/android/android-support-v4.jar"
+
+option output-name=lib/android/s3eGooglePlayGames.jar
