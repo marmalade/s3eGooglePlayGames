@@ -14,5 +14,5 @@ I have included a buildable sample including keys – however only Google Plus a
 Any problems please email me – dhunt.home@gmail.com .(It was a bit of a pig to get working as you may be able to tell from the length of the instructions below – apologies in advance I hope the process will be more streamlined in the future)
 
 
-Please see: https://github.com/marmalade/s3eGooglePlayGames/wiki/Google-Play-Games-Extension
-For usage information
+Please see: https://github.com/marmalade/s3eGooglePlayGames/wiki 
+for usage information
