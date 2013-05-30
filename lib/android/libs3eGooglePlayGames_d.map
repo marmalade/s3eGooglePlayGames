@@ -2636,20 +2636,20 @@ LOAD C:/Android/android-ndk-r8d/platforms/android-9/arch-arm/usr/lib/crtend_so.o
  .debug_abbrev  0x00000e39       0x14 c:/Android/android-ndk-r8d/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(_udivsi3.o)
  .debug_abbrev  0x00000e4d       0x14 c:/Android/android-ndk-r8d/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(_dvmd_lnx.o)
 
-.debug_line     0x00000000     0x13fd
+.debug_line     0x00000000     0x13f1
  *(.debug_line)
- .debug_line    0x00000000      0x4be debug\s3eGooglePlayGames_platform.os
- .debug_line    0x000004be      0x194 debug\s3eGooglePlayGames.os
- .debug_line    0x00000652      0x1cd debug\s3eGooglePlayGames_register.os
- .debug_line    0x0000081f       0x83 c:/Android/android-ndk-r8d/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(_aeabi_ldivmod.o)
- .debug_line    0x000008a2       0x89 c:/Android/android-ndk-r8d/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(bpabi.o)
- .debug_line    0x0000092b      0x4b0 c:/Android/android-ndk-r8d/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(unwind-arm.o)
- .debug_line    0x00000ddb       0xcf c:/Android/android-ndk-r8d/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(libunwind.o)
- .debug_line    0x00000eaa      0x1b0 c:/Android/android-ndk-r8d/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(pr-support.o)
- .debug_line    0x0000105a      0x140 c:/Android/android-ndk-r8d/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(_divdi3.o)
- .debug_line    0x0000119a      0x130 c:/Android/android-ndk-r8d/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(_udivdi3.o)
- .debug_line    0x000012ca       0xaa c:/Android/android-ndk-r8d/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(_udivsi3.o)
- .debug_line    0x00001374       0x89 c:/Android/android-ndk-r8d/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(_dvmd_lnx.o)
+ .debug_line    0x00000000      0x4ba debug\s3eGooglePlayGames_platform.os
+ .debug_line    0x000004ba      0x190 debug\s3eGooglePlayGames.os
+ .debug_line    0x0000064a      0x1c9 debug\s3eGooglePlayGames_register.os
+ .debug_line    0x00000813       0x83 c:/Android/android-ndk-r8d/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(_aeabi_ldivmod.o)
+ .debug_line    0x00000896       0x89 c:/Android/android-ndk-r8d/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(bpabi.o)
+ .debug_line    0x0000091f      0x4b0 c:/Android/android-ndk-r8d/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(unwind-arm.o)
+ .debug_line    0x00000dcf       0xcf c:/Android/android-ndk-r8d/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(libunwind.o)
+ .debug_line    0x00000e9e      0x1b0 c:/Android/android-ndk-r8d/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(pr-support.o)
+ .debug_line    0x0000104e      0x140 c:/Android/android-ndk-r8d/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(_divdi3.o)
+ .debug_line    0x0000118e      0x130 c:/Android/android-ndk-r8d/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(_udivdi3.o)
+ .debug_line    0x000012be       0xaa c:/Android/android-ndk-r8d/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(_udivsi3.o)
+ .debug_line    0x00001368       0x89 c:/Android/android-ndk-r8d/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(_dvmd_lnx.o)
 
 .debug_frame    0x00000000      0xb28
  *(.debug_frame)
@@ -2663,23 +2663,23 @@ LOAD C:/Android/android-ndk-r8d/platforms/android-9/arch-arm/usr/lib/crtend_so.o
  .debug_frame   0x00000ab8       0x48 c:/Android/android-ndk-r8d/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(_udivdi3.o)
  .debug_frame   0x00000b00       0x28 c:/Android/android-ndk-r8d/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(_udivsi3.o)
 
-.debug_str      0x00000000     0x5b47
+.debug_str      0x00000000     0x5b36
  *(.debug_str)
- .debug_str     0x00000000     0x4dc6 debug\s3eGooglePlayGames_platform.os
-                               0x4f4d (size before relaxing)
- .debug_str     0x00004dc6       0xd4 debug\s3eGooglePlayGames.os
-                                0x388 (size before relaxing)
- .debug_str     0x00004e9a      0x1c1 debug\s3eGooglePlayGames_register.os
-                                0x394 (size before relaxing)
- .debug_str     0x0000505b       0x97 c:/Android/android-ndk-r8d/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(bpabi.o)
+ .debug_str     0x00000000     0x4dbd debug\s3eGooglePlayGames_platform.os
+                               0x4f44 (size before relaxing)
+ .debug_str     0x00004dbd       0xd0 debug\s3eGooglePlayGames.os
+                                0x37f (size before relaxing)
+ .debug_str     0x00004e8d      0x1bd debug\s3eGooglePlayGames_register.os
+                                0x38b (size before relaxing)
+ .debug_str     0x0000504a       0x97 c:/Android/android-ndk-r8d/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(bpabi.o)
                                  0xbc (size before relaxing)
- .debug_str     0x000050f2      0x7ed c:/Android/android-ndk-r8d/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(unwind-arm.o)
+ .debug_str     0x000050e1      0x7ed c:/Android/android-ndk-r8d/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(unwind-arm.o)
                                 0x8d2 (size before relaxing)
- .debug_str     0x000058df      0x11b c:/Android/android-ndk-r8d/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(pr-support.o)
+ .debug_str     0x000058ce      0x11b c:/Android/android-ndk-r8d/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(pr-support.o)
                                 0x438 (size before relaxing)
- .debug_str     0x000059fa      0x143 c:/Android/android-ndk-r8d/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(_divdi3.o)
+ .debug_str     0x000059e9      0x143 c:/Android/android-ndk-r8d/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(_divdi3.o)
                                 0x1f3 (size before relaxing)
- .debug_str     0x00005b3d        0xa c:/Android/android-ndk-r8d/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(_udivdi3.o)
+ .debug_str     0x00005b2c        0xa c:/Android/android-ndk-r8d/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(_udivdi3.o)
                                 0x1f4 (size before relaxing)
 
 .debug_loc      0x00000000     0x2aea
@@ -2730,7 +2730,7 @@ LOAD C:/Android/android-ndk-r8d/platforms/android-9/arch-arm/usr/lib/crtend_so.o
 /DISCARD/
  *(.note.GNU-stack)
  *(.gnu_debuglink)
-OUTPUT(C:\Dev\AndyGray\trunk\Marmalade\Extensions\s3eGooglePlayGames\lib\android\libs3eGooglePlayGames_d.so elf32-littlearm)
+OUTPUT(E:\AndyGray\trunk\Marmalade\Extensions\s3eGooglePlayGames\lib\android\libs3eGooglePlayGames_d.so elf32-littlearm)
 
 .ARM.attributes
                 0x00000000       0x31

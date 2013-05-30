@@ -84,6 +84,18 @@ public abstract class BaseGameActivity extends LoaderActivity
         super.onActivityResult(request, response, data);
         mHelper.onActivityResult(request, response, data);
     }
+
+	@Override
+    protected void onDestroy() {
+        System.exit(0);
+        super.onDestroy();
+    }
+
+    @Override
+    public void finish() {
+        super.finish();
+            onDestroy();
+    }
     
     protected GamesClient getGamesClient() {
         return mHelper.getGamesClient();

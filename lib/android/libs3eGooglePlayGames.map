@@ -2465,7 +2465,7 @@ LOAD C:/Android/android-ndk-r8d/platforms/android-9/arch-arm/usr/lib/crtend_so.o
 /DISCARD/
  *(.note.GNU-stack)
  *(.gnu_debuglink)
-OUTPUT(C:\Dev\AndyGray\trunk\Marmalade\Extensions\s3eGooglePlayGames\lib\android\libs3eGooglePlayGames.so elf32-littlearm)
+OUTPUT(E:\AndyGray\trunk\Marmalade\Extensions\s3eGooglePlayGames\lib\android\libs3eGooglePlayGames.so elf32-littlearm)
 
 .ARM.attributes
                 0x00000000       0x31

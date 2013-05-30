@@ -5,13 +5,7 @@
       android:versionName="${VERSIONNAME}"
       android:installLocation="${INSTALLLOCATION}"
       >
-	 
-	<!-- Required for Google Play Games -->
-    <uses-sdk
-        android:minSdkVersion="13"
-        android:targetSdkVersion="17" /> 
-	<!-- Required for Google Play Games -->
-	  
+  
     <application android:icon="@drawable/icon" android:label="@string/app_name" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"${EXTRA_ATTRIBS}>
 		<!-- Required for Google Play Games -->
 		<meta-data android:name="com.google.android.gms.games.APP_ID"
