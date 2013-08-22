@@ -182,6 +182,8 @@ void s3eGPGShowLeaderboardUI(const char* leaderboardID);
  */
 bool s3eGPGIsSignedIn();
 
+void s3eGPGShowAllLeaderBoardsUI();
+
 S3E_END_C_DECL
 
 #endif /* !S3E_EXT_GOOGLEPLAYGAMES_H */

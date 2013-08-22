@@ -184,6 +184,13 @@ public class s3eGooglePlayGamesActivity extends BaseGameActivity
     	return mHelper.isSignedIn();
     }
     
+	public void s3eGPGShowAllLeaderBoardsUI()
+	{
+		Log.v(TAG, "ShowAllLeaderBoardsUI called");
+		startActivityForResult(mHelper.getGamesClient().getAllLeaderboardsIntent(),REQUEST_ALL_LEADERBOARDS);
+	}
+	
     private static int REQUEST_ACHIEVEMENTS = 11111;
     private static int REQUEST_LEADERBOARDS = 22222;
+	private static int REQUEST_ALL_LEADERBOARDS = 33333;
 }

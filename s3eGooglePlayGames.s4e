@@ -173,7 +173,16 @@ void s3eGPGShowLeaderboardUI(const char* leaderboardID) run_on_os_thread
  * Check if the user is signed in
  */
  
- bool s3eGPGIsSignedIn()
+ bool s3eGPGIsSignedIn() 0
+ 
+ /**
+ * Display the list of leaderboards for the game
+ * 
+ */
+ 
+ void s3eGPGShowAllLeaderBoardsUI() run_on_os_thread
+ 
+ 
 
 
 

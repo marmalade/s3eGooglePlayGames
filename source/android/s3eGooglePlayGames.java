@@ -87,6 +87,13 @@ public class s3eGooglePlayGames
     	Log.v(TAG, "s3eGPGShowAchievementsUI called");;
     	GetActivity().s3eGPGShowAchievementsUI();  
     }
+	
+	public void s3eGPGShowAllLeaderBoardsUI()
+	{
+	    Log.v(TAG, "s3eGPGShowAchievementsUI called");;
+    	GetActivity().s3eGPGShowAchievementsUI();
+	
+	}
     
     public void s3eGPGSubmitLeaderboardScore(String leaderboardID, int score)
     {

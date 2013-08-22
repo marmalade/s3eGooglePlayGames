@@ -62,5 +62,7 @@ void s3eGPGShowLeaderboardUI_platform(const char* leaderboardID);
 
 bool s3eGPGIsSignedIn_platform();
 
+void s3eGPGShowAllLeaderBoardsUI_platform();
+
 
 #endif /* !S3EGOOGLEPLAYGAMES_INTERNAL_H */

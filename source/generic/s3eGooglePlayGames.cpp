@@ -70,5 +70,10 @@ void s3eGPGShowLeaderboardUI(const char* leaderboardID)
 
 bool s3eGPGIsSignedIn()
 {
-	s3eGPGIsSignedIn_platform();
+	return s3eGPGIsSignedIn_platform();
+}
+
+void s3eGPGShowAllLeaderBoardsUI()
+{
+	s3eGPGShowAllLeaderBoardsUI_platform();
 }

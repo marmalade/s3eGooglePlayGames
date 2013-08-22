@@ -10,6 +10,13 @@
 
 #include "s3eGooglePlayGames.h"
 
+
+// For MIPs (and WP8) platform we do not have asm code for stack switching 
+// implemented. So we make LoaderCallStart call manually to set GlobalLock
+#if defined __mips || defined S3E_ANDROID_X86 || (defined(WINAPI_FAMILY) && (WINAPI_FAMILY == WINAPI_FAMILY_PHONE_APP))
+#define LOADER_CALL
+#endif
+
 /**
  * Definitions for functions types passed to/from s3eExt interface
  */
@@ -23,6 +30,7 @@ typedef       void(*s3eGPGShowAchievementsUI_t)();
 typedef       void(*s3eGPGSubmitLeaderboardScore_t)(const char* leaderboardID, int score);
 typedef       void(*s3eGPGShowLeaderboardUI_t)(const char* leaderboardID);
 typedef       bool(*s3eGPGIsSignedIn_t)();
+typedef       void(*s3eGPGShowAllLeaderBoardsUI_t)();
 
 /**
  * struct that gets filled in by s3eGooglePlayGamesRegister
@@ -39,6 +47,7 @@ typedef struct s3eGooglePlayGamesFuncs
     s3eGPGSubmitLeaderboardScore_t m_s3eGPGSubmitLeaderboardScore;
     s3eGPGShowLeaderboardUI_t m_s3eGPGShowLeaderboardUI;
     s3eGPGIsSignedIn_t m_s3eGPGIsSignedIn;
+    s3eGPGShowAllLeaderBoardsUI_t m_s3eGPGShowAllLeaderBoardsUI;
 } s3eGooglePlayGamesFuncs;
 
 static s3eGooglePlayGamesFuncs g_Ext;
@@ -91,15 +100,13 @@ s3eResult s3eGPGInitialize()
     if (!_extLoad())
         return S3E_RESULT_ERROR;
 
-#ifdef __mips
-    // For MIPs platform we do not have asm code for stack switching 
-    // implemented. So we make LoaderCallStart call manually to set GlobalLock
+#ifdef LOADER_CALL
     s3eDeviceLoaderCallStart(S3E_TRUE, NULL);
 #endif
 
     s3eResult ret = g_Ext.m_s3eGPGInitialize();
 
-#ifdef __mips
+#ifdef LOADER_CALL
     s3eDeviceLoaderCallDone(S3E_TRUE, NULL);
 #endif
 
@@ -113,15 +120,13 @@ void s3eGPGDeInitialize()
     if (!_extLoad())
         return;
 
-#ifdef __mips
-    // For MIPs platform we do not have asm code for stack switching 
-    // implemented. So we make LoaderCallStart call manually to set GlobalLock
+#ifdef LOADER_CALL
     s3eDeviceLoaderCallStart(S3E_TRUE, NULL);
 #endif
 
     g_Ext.m_s3eGPGDeInitialize();
 
-#ifdef __mips
+#ifdef LOADER_CALL
     s3eDeviceLoaderCallDone(S3E_TRUE, NULL);
 #endif
 
@@ -135,15 +140,13 @@ void s3eGPGRegisterCallback(s3eGPGCallbackType callbackID, s3eCallback callbackF
     if (!_extLoad())
         return;
 
-#ifdef __mips
-    // For MIPs platform we do not have asm code for stack switching 
-    // implemented. So we make LoaderCallStart call manually to set GlobalLock
+#ifdef LOADER_CALL
     s3eDeviceLoaderCallStart(S3E_TRUE, NULL);
 #endif
 
     g_Ext.m_s3eGPGRegisterCallback(callbackID, callbackFn, userData);
 
-#ifdef __mips
+#ifdef LOADER_CALL
     s3eDeviceLoaderCallDone(S3E_TRUE, NULL);
 #endif
 
@@ -157,15 +160,13 @@ void s3eGPGUnRegisterCallback(s3eGPGCallbackType callbackID, s3eCallback callbac
     if (!_extLoad())
         return;
 
-#ifdef __mips
-    // For MIPs platform we do not have asm code for stack switching 
-    // implemented. So we make LoaderCallStart call manually to set GlobalLock
+#ifdef LOADER_CALL
     s3eDeviceLoaderCallStart(S3E_TRUE, NULL);
 #endif
 
     g_Ext.m_s3eGPGUnRegisterCallback(callbackID, callbackFn);
 
-#ifdef __mips
+#ifdef LOADER_CALL
     s3eDeviceLoaderCallDone(S3E_TRUE, NULL);
 #endif
 
@@ -179,15 +180,13 @@ void s3eGPGUnlockAchievement(const char* id)
     if (!_extLoad())
         return;
 
-#ifdef __mips
-    // For MIPs platform we do not have asm code for stack switching 
-    // implemented. So we make LoaderCallStart call manually to set GlobalLock
+#ifdef LOADER_CALL
     s3eDeviceLoaderCallStart(S3E_TRUE, NULL);
 #endif
 
     g_Ext.m_s3eGPGUnlockAchievement(id);
 
-#ifdef __mips
+#ifdef LOADER_CALL
     s3eDeviceLoaderCallDone(S3E_TRUE, NULL);
 #endif
 
@@ -201,15 +200,13 @@ void s3eGPGUnlockIncrementalAchievement(const char* id, int increment)
     if (!_extLoad())
         return;
 
-#ifdef __mips
-    // For MIPs platform we do not have asm code for stack switching 
-    // implemented. So we make LoaderCallStart call manually to set GlobalLock
+#ifdef LOADER_CALL
     s3eDeviceLoaderCallStart(S3E_TRUE, NULL);
 #endif
 
     g_Ext.m_s3eGPGUnlockIncrementalAchievement(id, increment);
 
-#ifdef __mips
+#ifdef LOADER_CALL
     s3eDeviceLoaderCallDone(S3E_TRUE, NULL);
 #endif
 
@@ -223,15 +220,13 @@ void s3eGPGShowAchievementsUI()
     if (!_extLoad())
         return;
 
-#ifdef __mips
-    // For MIPs platform we do not have asm code for stack switching 
-    // implemented. So we make LoaderCallStart call manually to set GlobalLock
+#ifdef LOADER_CALL
     s3eDeviceLoaderCallStart(S3E_TRUE, NULL);
 #endif
 
     g_Ext.m_s3eGPGShowAchievementsUI();
 
-#ifdef __mips
+#ifdef LOADER_CALL
     s3eDeviceLoaderCallDone(S3E_TRUE, NULL);
 #endif
 
@@ -245,15 +240,13 @@ void s3eGPGSubmitLeaderboardScore(const char* leaderboardID, int score)
     if (!_extLoad())
         return;
 
-#ifdef __mips
-    // For MIPs platform we do not have asm code for stack switching 
-    // implemented. So we make LoaderCallStart call manually to set GlobalLock
+#ifdef LOADER_CALL
     s3eDeviceLoaderCallStart(S3E_TRUE, NULL);
 #endif
 
     g_Ext.m_s3eGPGSubmitLeaderboardScore(leaderboardID, score);
 
-#ifdef __mips
+#ifdef LOADER_CALL
     s3eDeviceLoaderCallDone(S3E_TRUE, NULL);
 #endif
 
@@ -267,15 +260,13 @@ void s3eGPGShowLeaderboardUI(const char* leaderboardID)
     if (!_extLoad())
         return;
 
-#ifdef __mips
-    // For MIPs platform we do not have asm code for stack switching 
-    // implemented. So we make LoaderCallStart call manually to set GlobalLock
+#ifdef LOADER_CALL
     s3eDeviceLoaderCallStart(S3E_TRUE, NULL);
 #endif
 
     g_Ext.m_s3eGPGShowLeaderboardUI(leaderboardID);
 
-#ifdef __mips
+#ifdef LOADER_CALL
     s3eDeviceLoaderCallDone(S3E_TRUE, NULL);
 #endif
 
@@ -287,19 +278,37 @@ bool s3eGPGIsSignedIn()
     IwTrace(GOOGLEPLAYGAMES_VERBOSE, ("calling s3eGooglePlayGames[9] func: s3eGPGIsSignedIn"));
 
     if (!_extLoad())
-        return false;
+        return 0;
 
-#ifdef __mips
-    // For MIPs platform we do not have asm code for stack switching 
-    // implemented. So we make LoaderCallStart call manually to set GlobalLock
+#ifdef LOADER_CALL
     s3eDeviceLoaderCallStart(S3E_TRUE, NULL);
 #endif
 
     bool ret = g_Ext.m_s3eGPGIsSignedIn();
 
-#ifdef __mips
+#ifdef LOADER_CALL
     s3eDeviceLoaderCallDone(S3E_TRUE, NULL);
 #endif
 
     return ret;
+}
+
+void s3eGPGShowAllLeaderBoardsUI()
+{
+    IwTrace(GOOGLEPLAYGAMES_VERBOSE, ("calling s3eGooglePlayGames[10] func: s3eGPGShowAllLeaderBoardsUI"));
+
+    if (!_extLoad())
+        return;
+
+#ifdef LOADER_CALL
+    s3eDeviceLoaderCallStart(S3E_TRUE, NULL);
+#endif
+
+    g_Ext.m_s3eGPGShowAllLeaderBoardsUI();
+
+#ifdef LOADER_CALL
+    s3eDeviceLoaderCallDone(S3E_TRUE, NULL);
+#endif
+
+    return;
 }

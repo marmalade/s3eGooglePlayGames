@@ -78,6 +78,12 @@ static void s3eGPGShowLeaderboardUI_wrap(const char* leaderboardID)
     s3eEdkThreadRunOnOS((s3eEdkThreadFunc)s3eGPGShowLeaderboardUI, 1, leaderboardID);
 }
 
+static void s3eGPGShowAllLeaderBoardsUI_wrap()
+{
+    IwTrace(GOOGLEPLAYGAMES_VERBOSE, ("calling s3eGooglePlayGames func on main thread: s3eGPGShowAllLeaderBoardsUI"));
+    s3eEdkThreadRunOnOS((s3eEdkThreadFunc)s3eGPGShowAllLeaderBoardsUI, 0);
+}
+
 #define s3eGPGInitialize s3eGPGInitialize_wrap
 #define s3eGPGDeInitialize s3eGPGDeInitialize_wrap
 #define s3eGPGRegisterCallback s3eGPGRegisterCallback_wrap
@@ -87,13 +93,14 @@ static void s3eGPGShowLeaderboardUI_wrap(const char* leaderboardID)
 #define s3eGPGShowAchievementsUI s3eGPGShowAchievementsUI_wrap
 #define s3eGPGSubmitLeaderboardScore s3eGPGSubmitLeaderboardScore_wrap
 #define s3eGPGShowLeaderboardUI s3eGPGShowLeaderboardUI_wrap
+#define s3eGPGShowAllLeaderBoardsUI s3eGPGShowAllLeaderBoardsUI_wrap
 
 #endif
 
 void s3eGooglePlayGamesRegisterExt()
 {
     /* fill in the function pointer struct for this extension */
-    void* funcPtrs[10];
+    void* funcPtrs[11];
     funcPtrs[0] = (void*)s3eGPGInitialize;
     funcPtrs[1] = (void*)s3eGPGDeInitialize;
     funcPtrs[2] = (void*)s3eGPGRegisterCallback;
@@ -104,11 +111,12 @@ void s3eGooglePlayGamesRegisterExt()
     funcPtrs[7] = (void*)s3eGPGSubmitLeaderboardScore;
     funcPtrs[8] = (void*)s3eGPGShowLeaderboardUI;
     funcPtrs[9] = (void*)s3eGPGIsSignedIn;
+    funcPtrs[10] = (void*)s3eGPGShowAllLeaderBoardsUI;
 
     /*
      * Flags that specify the extension's use of locking and stackswitching
      */
-    int flags[10] = { 0 };
+    int flags[11] = { 0 };
 
     /*
      * Register the extension
