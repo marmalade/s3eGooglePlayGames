@@ -90,8 +90,8 @@ public class s3eGooglePlayGames
 	
 	public void s3eGPGShowAllLeaderBoardsUI()
 	{
-	    Log.v(TAG, "s3eGPGShowAchievementsUI called");;
-    	GetActivity().s3eGPGShowAchievementsUI();
+	    Log.v(TAG, "s3eGPGShowAllLeaderBoardsUI called");;
+    	GetActivity().s3eGPGShowAllLeaderBoardsUI();
 	
 	}
     

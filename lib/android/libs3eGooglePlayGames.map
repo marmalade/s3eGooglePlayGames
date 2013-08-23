@@ -2478,7 +2478,7 @@ LOAD C:/android-ndk-r8b/platforms/android-9/arch-arm/usr/lib/crtend_so.o
 /DISCARD/
  *(.note.GNU-stack)
  *(.gnu_debuglink)
-OUTPUT(C:\Users\ahorvath\Desktop\s3eGooglePlayGames-master\lib\android\libs3eGooglePlayGames.so elf32-littlearm)
+OUTPUT(C:\Users\ahorvath\Desktop\s3eGooglePlayGames\lib\android\libs3eGooglePlayGames.so elf32-littlearm)
 
 .ARM.attributes
                 0x00000000       0x31
