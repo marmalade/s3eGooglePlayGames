@@ -1,0 +1,2408 @@
+# 1 "C:\\Users\\ahorvath\\Documents\\GitHub\\s3eGooglePlayGames\\source\\generic\\s3eGooglePlayGames_register.cpp"
+# 1 "c:\\Users\\ahorvath\\Documents\\GitHub\\s3eGooglePlayGames\\build_s3egoogleplaygames_android_linux_scons_arm//"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "./temp_defines_debug.h" 1
+# 1 "<command-line>" 2
+# 1 "C:\\Users\\ahorvath\\Documents\\GitHub\\s3eGooglePlayGames\\source\\generic\\s3eGooglePlayGames_register.cpp"
+# 13 "C:\\Users\\ahorvath\\Documents\\GitHub\\s3eGooglePlayGames\\source\\generic\\s3eGooglePlayGames_register.cpp"
+# 1 "c:/dev/ahorvath_barium/depot/sdk/main/modules/iwcore/h/IwDebug.h" 1
+# 15 "c:/dev/ahorvath_barium/depot/sdk/main/modules/iwcore/h/IwDebug.h"
+# 1 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eTypes.h" 1
+# 35 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eTypes.h"
+typedef unsigned char s3e_uint8_t;
+typedef signed char s3e_int8_t;
+typedef unsigned short int s3e_uint16_t;
+typedef signed short int s3e_int16_t;
+typedef unsigned int s3e_uint32_t;
+typedef signed int s3e_int32_t;
+# 49 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eTypes.h"
+  typedef signed long long s3e_int64_t;
+  typedef unsigned long long s3e_uint64_t;
+# 62 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eTypes.h"
+typedef s3e_uint64_t uint64_t;
+typedef s3e_int64_t int64_t;
+typedef s3e_uint32_t uint32_t;
+typedef s3e_int32_t int32_t;
+typedef s3e_uint16_t uint16_t;
+typedef s3e_int16_t int16_t;
+typedef s3e_uint8_t uint8_t;
+typedef s3e_int8_t int8_t;
+# 84 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eTypes.h"
+    typedef int intptr_t;
+    typedef unsigned int uintptr_t;
+# 96 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eTypes.h"
+typedef unsigned int uint;
+typedef unsigned short int ushort;
+typedef unsigned long int ulong;
+typedef unsigned char uint8;
+typedef signed char int8;
+
+
+typedef int64_t int64;
+typedef uint64_t uint64;
+
+
+
+
+typedef unsigned int uint32;
+
+
+
+
+
+
+typedef signed int int32;
+
+
+
+
+
+
+typedef uint16_t uint16;
+
+
+
+
+typedef int16_t int16;
+# 207 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eTypes.h"
+typedef enum s3eResult
+{
+    S3E_RESULT_SUCCESS = 0,
+    S3E_RESULT_ERROR = 1
+} s3eResult;
+
+
+
+
+typedef uint8 s3eBool;
+# 227 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eTypes.h"
+typedef unsigned short s3eWChar;
+# 237 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eTypes.h"
+typedef int32 (*s3eCallback) (void* systemData, void* userData);
+# 16 "c:/dev/ahorvath_barium/depot/sdk/main/modules/iwcore/h/IwDebug.h" 2
+# 1 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDebug.h" 1
+# 15 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDebug.h"
+# 1 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eTypes.h" 1
+# 16 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDebug.h" 2
+# 38 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDebug.h"
+typedef enum s3eDebugProperty
+{
+
+
+
+    S3E_DEBUG_TRACE_ENABLED = 0,
+
+
+
+
+
+    S3E_DEBUG_TRACE_TO_FILE = 1,
+
+
+
+
+    S3E_DEBUG_ASSERT_ENABLED = 2,
+
+
+
+
+
+    S3E_DEBUG_AVAILABLE = 3,
+
+
+
+
+    S3E_DEBUG_FONT_SCALE = 4,
+
+
+
+
+    S3E_DEBUG_FONT_WIDTH = 5,
+
+
+
+
+    S3E_DEBUG_FONT_HEIGHT = 6
+
+} s3eDebugProperty;
+# 95 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDebug.h"
+extern "C" int32 s3eDebugGetInt(s3eDebugProperty property);
+# 113 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDebug.h"
+extern "C" s3eResult s3eDebugSetInt(s3eDebugProperty property, int32 value);
+
+
+
+
+
+
+
+typedef enum s3eDebugCallback
+{
+# 137 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDebug.h"
+    S3E_DEBUG_ASSERT = 0,
+# 152 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDebug.h"
+    S3E_DEBUG_ERROR = 1,
+
+    S3E_DEBUG_CALLBACK_MAX
+} s3eDebugCallback;
+# 180 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDebug.h"
+extern "C" s3eResult s3eDebugRegister(s3eDebugCallback cbid, s3eCallback fn, void* userData);
+# 197 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDebug.h"
+extern "C" s3eResult s3eDebugUnRegister(s3eDebugCallback cbid, s3eCallback fn);
+# 206 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDebug.h"
+typedef enum s3eDebugError
+{
+    S3E_DEBUG_ERR_NONE = 0,
+    S3E_DEBUG_ERR_PARAM = 1,
+    S3E_DEBUG_ERR_TOO_MANY = 2,
+    S3E_DEBUG_ERR_ALREADY_REG = 3,
+    S3E_DEBUG_ERR_NOT_FOUND = 4
+} s3eDebugError;
+# 226 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDebug.h"
+extern "C" s3eDebugError s3eDebugGetError();
+# 239 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDebug.h"
+extern "C" const char* s3eDebugGetErrorString();
+
+typedef enum s3eErrorShowResult
+{
+
+    S3E_ERROR_SHOW_CONTINUE = 0,
+
+    S3E_ERROR_SHOW_STOP = 1,
+
+    S3E_ERROR_SHOW_IGNORE = 2,
+
+
+
+
+
+    S3E_ERROR_SHOW_AGAIN = 3
+} s3eErrorShowResult;
+
+
+
+
+typedef enum s3eMessageType
+{
+
+
+
+
+
+    S3E_MESSAGE_CONTINUE = 0,
+
+
+
+
+
+    S3E_MESSAGE_CONTINUE_STOP = 1,
+
+
+
+
+
+
+    S3E_MESSAGE_CONTINUE_STOP_IGNORE = 2
+} s3eMessageType;
+
+
+
+
+
+
+
+extern "C" s3eBool s3eDebugIsDebuggerPresent();
+# 305 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDebug.h"
+extern "C" void s3eDebugOutputString(const char* pStr);
+# 317 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDebug.h"
+extern "C" s3eErrorShowResult s3eDebugErrorShow(s3eMessageType type, const char* string);
+
+
+
+
+
+
+extern "C" s3eErrorShowResult s3eDebugErrorPrintf(const char* fmt, ...)
+
+__attribute__((format(printf, 1, 2)))
+
+;
+# 342 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDebug.h"
+extern "C" s3eErrorShowResult s3eDebugAssertShow(s3eMessageType type, const char* string);
+# 355 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDebug.h"
+extern "C" void s3eDebugTraceLine(const char* string);
+
+
+
+
+
+
+extern "C" int s3eDebugTracePrintf(const char* fmt, ...)
+
+__attribute__((format(printf, 1, 2)))
+
+;
+
+
+
+
+
+
+extern "C" void s3eDebugTraceClearFile();
+# 382 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDebug.h"
+extern "C" void s3eDebugTraceFlush();
+# 407 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDebug.h"
+extern "C" void s3eDebugPrint(int x, int y, const char* string, s3eBool wrap);
+
+
+
+
+
+
+extern "C" void s3eDebugPrintf(int x, int y, s3eBool wrap, const char* fmt, ...)
+
+__attribute__((format(printf, 4, 5)))
+
+;
+
+
+
+
+
+
+
+extern "C" s3eBool s3eDebugTraceChannelSwitch(const char* channel, s3eBool new_state);
+# 17 "c:/dev/ahorvath_barium/depot/sdk/main/modules/iwcore/h/IwDebug.h" 2
+# 1 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDevice.h" 1
+# 39 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDevice.h"
+typedef enum s3eDeviceError
+{
+    S3E_DEVICE_ERR_NONE = 0,
+    S3E_DEVICE_ERR_PARAM = 1,
+    S3E_DEVICE_ERR_TOO_MANY = 2,
+    S3E_DEVICE_ERR_ALREADY_REG = 3,
+    S3E_DEVICE_ERR_NOT_FOUND = 4,
+    S3E_DEVICE_ERR_UNAVAIL = 5,
+    S3E_DEVICE_ERR_DEVICE = 6,
+    S3E_DEVICE_ERR_UNSUPPORTED = 7,
+    S3E_DEVICE_ERR_MEM = 8,
+    S3E_DEVICE_ERR_GENERIC = 9,
+    S3E_DEVICE_ERR_INVALID_DRIVE = 10,
+    S3E_DEVICE_ERR_INVALID_PATH = 11
+} s3eDeviceError;
+# 66 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDevice.h"
+extern "C" s3eDeviceError s3eDeviceGetError();
+# 80 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDevice.h"
+extern "C" const char* s3eDeviceGetErrorString();
+# 89 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDevice.h"
+typedef enum s3eDeviceFPUType
+{
+    S3E_DEVICE_FPU_NONE = 0,
+    S3E_DEVICE_FPU_VFP = 1,
+    S3E_DEVICE_FPU_VFPV3 = 2,
+    S3E_DEVICE_FPU_NEON = 3
+} s3eDeviceFPUType;
+
+
+
+
+
+
+typedef enum s3eDeviceProperty
+{
+
+
+
+
+
+
+
+    S3E_DEVICE_OS = 0,
+
+
+
+
+
+    S3E_DEVICE_CLASS = 1,
+# 129 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDevice.h"
+    S3E_DEVICE_ID = 2,
+
+
+
+
+
+
+    S3E_DEVICE_PHONE_NUMBER = 3,
+
+
+
+
+
+    S3E_DEVICE_LANGUAGE = 4,
+
+
+
+
+
+
+    S3E_DEVICE_STATE = 5,
+
+
+
+
+    S3E_DEVICE_FREE_RAM = 6,
+
+
+
+
+    S3E_DEVICE_TOTAL_RAM = 7,
+# 168 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDevice.h"
+    S3E_DEVICE_ARCHITECTURE = 8,
+# 178 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDevice.h"
+    S3E_DEVICE_S3E_VERSION = 9,
+
+
+
+
+
+    S3E_DEVICE_BATTERY_LEVEL = 10,
+
+
+
+
+
+
+    S3E_DEVICE_LEFT_SOFTKEY_IS_BACK = 11,
+
+
+
+
+
+
+    S3E_DEVICE_MAINS_POWER = 12,
+# 207 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDevice.h"
+    S3E_DEVICE_OS_VERSION = 13,
+
+
+
+
+
+
+    S3E_DEVICE_CHIPSET = 14,
+# 223 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDevice.h"
+    S3E_DEVICE_EXIT_CODE = 15,
+
+
+
+
+
+
+    S3E_DEVICE_FPU = 16,
+
+
+
+
+
+    S3E_DEVICE_BACK_SOFTKEY_POSITION = 17,
+
+
+
+
+
+    S3E_DEVICE_ADVANCE_SOFTKEY_POSITION = 18,
+# 253 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDevice.h"
+    S3E_DEVICE_SDK_VERSION = 19,
+# 262 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDevice.h"
+    S3E_DEVICE_LOCALE = 20,
+
+
+
+
+
+    S3E_DEVICE_NAME = 21,
+
+
+
+
+
+
+
+    S3E_DEVICE_SUPPORTS_SIGNAL_HANDLING = 22,
+
+
+
+
+
+
+
+    S3E_DEVICE_EXIT_SIGNAL = 23,
+# 293 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDevice.h"
+    S3E_DEVICE_PROXIMITY = 24,
+# 311 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDevice.h"
+    S3E_DEVICE_UNIQUE_ID = 25,
+# 323 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDevice.h"
+    S3E_DEVICE_IMSI = 26,
+
+
+
+
+
+    S3E_DEVICE_SILENT_MODE = 27,
+
+
+
+
+    S3E_DEVICE_NUM_CPU_CORES = 28,
+
+
+
+
+    S3E_DEVICE_MEM_TOTAL = 29,
+
+
+
+
+
+
+
+    S3E_DEVICE_MEM_FREE = 30,
+
+
+
+
+
+    S3E_DEVICE_TIMEZONE = 31,
+
+
+
+
+
+
+    S3E_DEVICE_3D_MODE = 32,
+
+
+
+
+
+
+
+    S3E_DEVICE_PROCESS_ID = 33,
+
+
+
+
+
+    S3E_DEVICE_SUPPORTS_SUSPEND_RESUME = 34
+
+} s3eDeviceProperty;
+
+
+
+
+
+
+typedef enum s3eDeviceOSID
+{
+
+    S3E_OS_ID_WINDOWS = 3,
+
+    S3E_OS_ID_LINUX = 5,
+
+    S3E_OS_ID_ARM_SEMIH = 8,
+
+    S3E_OS_ID_OSX = 13,
+
+    S3E_OS_ID_IPHONE = 14,
+
+    S3E_OS_ID_BADA = 18,
+
+    S3E_OS_ID_ANDROID = 19,
+
+    S3E_OS_ID_QNX = 24,
+
+    S3E_OS_ID_ROKU = 25,
+
+    S3E_OS_ID_WP8 = 26,
+
+    S3E_OS_ID_TIZEN = 27,
+
+
+    S3E_OS_ID_SYMBIAN = 1,
+
+    S3E_OS_ID_BREW = 2,
+
+    S3E_OS_ID_WINMOBILE = 4,
+
+    S3E_OS_ID_WIPI = 6,
+
+    S3E_OS_ID_NDS = 7,
+
+    S3E_OS_ID_NUCLEUS = 9,
+
+    S3E_OS_ID_NGI = 10,
+
+    S3E_OS_ID_WINCE = 11,
+
+    S3E_OS_ID_SHARPEMP = 12,
+
+    S3E_OS_ID_UIQ = 15,
+
+    S3E_OS_ID_PS3 = 16,
+
+    S3E_OS_ID_X360 = 17,
+
+    S3E_OS_ID_WEBOS = 20,
+
+    S3E_OS_ID_PSP = 21,
+
+    S3E_OS_ID_WII = 22,
+
+    S3E_OS_ID_MEEGO = 23,
+
+} s3eDeviceOSID;
+
+
+
+
+
+
+typedef enum s3eDeviceClassID
+{
+    S3E_DEVICE_CLASS_UNKNOWN = 0,
+
+    S3E_DEVICE_CLASS_WINDOWS_GENERIC = 3000,
+    S3E_DEVICE_CLASS_WINDOWS_PHONE = 3010,
+    S3E_DEVICE_CLASS_LINUX_GENERIC = 5000,
+    S3E_DEVICE_CLASS_LINUX_DESKTOP = 5001,
+    S3E_DEVICE_CLASS_LINUX_EMBED = 5002,
+    S3E_DEVICE_CLASS_ARM_SEMIH_GENERIC = 8000,
+    S3E_DEVICE_CLASS_OSX_DESKTOP = 11000,
+    S3E_DEVICE_CLASS_IPHONE = 12000,
+    S3E_DEVICE_CLASS_BADA_GENERIC = 15000,
+    S3E_DEVICE_CLASS_ANDROID_GENERIC = 16000,
+    S3E_DEVICE_CLASS_QNX = 19000,
+    S3E_DEVICE_CLASS_TIZEN_GENERIC = 20000,
+
+    S3E_DEVICE_CLASS_SYMBIAN_GENERIC = 1000,
+    S3E_DEVICE_CLASS_SYMBIAN_SERIES60 = 1001,
+    S3E_DEVICE_CLASS_SYMBIAN_SERIES60_EMULATOR = 1002,
+    S3E_DEVICE_CLASS_SYMBIAN_UIQ = 1003,
+    S3E_DEVICE_CLASS_SYMBIAN_UIQ_EMULATOR = 1004,
+    S3E_DEVICE_CLASS_BREW_GENERIC = 2000,
+    S3E_DEVICE_CLASS_BREW_QCIF_3G = 2001,
+    S3E_DEVICE_CLASS_BREW_QCIF_25G = 2002,
+    S3E_DEVICE_CLASS_BREW_SQCIF_25G = 2003,
+    S3E_DEVICE_CLASS_BREW_QVGA_3G = 2004,
+    S3E_DEVICE_CLASS_WINCE_GENERIC = 4000,
+    S3E_DEVICE_CLASS_WINMOBILE_SP = 4001,
+    S3E_DEVICE_CLASS_WINMOBILE_PPC = 4002,
+    S3E_DEVICE_CLASS_WIPI_GENERIC = 6000,
+    S3E_DEVICE_CLASS_NDS_GENERIC = 7000,
+    S3E_DEVICE_CLASS_NDS_NDSI = 7001,
+    S3E_DEVICE_CLASS_NUCLEUS_GENERIC = 9000,
+    S3E_DEVICE_CLASS_NGI_GENERIC = 10000,
+    S3E_DEVICE_CLASS_PS3 = 13000,
+    S3E_DEVICE_CLASS_X360 = 14000,
+    S3E_DEVICE_CLASS_PSP = 17000,
+    S3E_DEVICE_CLASS_WII = 18000
+
+} s3eDeviceClassID;
+
+
+
+
+typedef enum s3eDeviceLanguage
+{
+    S3E_DEVICE_LANGUAGE_UNKNOWN = 0,
+    S3E_DEVICE_LANGUAGE_ENGLISH = 1,
+    S3E_DEVICE_LANGUAGE_FRENCH = 2,
+    S3E_DEVICE_LANGUAGE_GERMAN = 3,
+    S3E_DEVICE_LANGUAGE_SPANISH = 4,
+    S3E_DEVICE_LANGUAGE_ITALIAN = 5,
+    S3E_DEVICE_LANGUAGE_PORTUGUESE = 6,
+    S3E_DEVICE_LANGUAGE_DUTCH = 7,
+    S3E_DEVICE_LANGUAGE_TURKISH = 8,
+    S3E_DEVICE_LANGUAGE_CROATIAN = 9,
+    S3E_DEVICE_LANGUAGE_CZECH = 10,
+    S3E_DEVICE_LANGUAGE_DANISH = 11,
+    S3E_DEVICE_LANGUAGE_FINNISH = 12,
+    S3E_DEVICE_LANGUAGE_HUNGARIAN = 13,
+    S3E_DEVICE_LANGUAGE_NORWEGIAN = 14,
+    S3E_DEVICE_LANGUAGE_POLISH = 15,
+    S3E_DEVICE_LANGUAGE_RUSSIAN = 16,
+    S3E_DEVICE_LANGUAGE_SERBIAN = 17,
+    S3E_DEVICE_LANGUAGE_SLOVAK = 18,
+    S3E_DEVICE_LANGUAGE_SLOVENIAN = 19,
+    S3E_DEVICE_LANGUAGE_SWEDISH = 20,
+    S3E_DEVICE_LANGUAGE_UKRAINIAN = 21,
+    S3E_DEVICE_LANGUAGE_GREEK = 22,
+    S3E_DEVICE_LANGUAGE_JAPANESE = 23,
+    S3E_DEVICE_LANGUAGE_SIMPL_CHINESE = 24,
+    S3E_DEVICE_LANGUAGE_TRAD_CHINESE = 25,
+    S3E_DEVICE_LANGUAGE_KOREAN = 26,
+    S3E_DEVICE_LANGUAGE_ICELANDIC = 27,
+    S3E_DEVICE_LANGUAGE_FLEMISH = 28,
+    S3E_DEVICE_LANGUAGE_THAI = 29,
+    S3E_DEVICE_LANGUAGE_AFRIKAANS = 30,
+    S3E_DEVICE_LANGUAGE_ALBANIAN = 31,
+    S3E_DEVICE_LANGUAGE_AMHARIC = 32,
+    S3E_DEVICE_LANGUAGE_ARABIC = 33,
+    S3E_DEVICE_LANGUAGE_ARMENIAN = 34,
+    S3E_DEVICE_LANGUAGE_AZERBAIJANI = 35,
+    S3E_DEVICE_LANGUAGE_TAGALOG = 36,
+    S3E_DEVICE_LANGUAGE_BELARUSSIAN = 37,
+    S3E_DEVICE_LANGUAGE_BENGALI = 38,
+    S3E_DEVICE_LANGUAGE_BULGARIAN = 39,
+    S3E_DEVICE_LANGUAGE_BURMESE = 40,
+    S3E_DEVICE_LANGUAGE_CATALAN = 41,
+    S3E_DEVICE_LANGUAGE_ESTONIAN = 42,
+    S3E_DEVICE_LANGUAGE_FARSI = 43,
+    S3E_DEVICE_LANGUAGE_GAELIC = 44,
+    S3E_DEVICE_LANGUAGE_GEORGIAN = 45,
+    S3E_DEVICE_LANGUAGE_GUJARATI = 46,
+    S3E_DEVICE_LANGUAGE_HEBREW = 47,
+    S3E_DEVICE_LANGUAGE_HINDI = 48,
+    S3E_DEVICE_LANGUAGE_INDONESIAN = 49,
+    S3E_DEVICE_LANGUAGE_IRISH = 50,
+    S3E_DEVICE_LANGUAGE_KANNADA = 51,
+    S3E_DEVICE_LANGUAGE_KAZAKH = 52,
+    S3E_DEVICE_LANGUAGE_KHMER = 53,
+    S3E_DEVICE_LANGUAGE_LAO = 54,
+    S3E_DEVICE_LANGUAGE_LATVIAN = 55,
+    S3E_DEVICE_LANGUAGE_LITHUANIAN = 56,
+    S3E_DEVICE_LANGUAGE_MACEDONIAN = 57,
+    S3E_DEVICE_LANGUAGE_MALAY = 58,
+    S3E_DEVICE_LANGUAGE_MALAYALAM = 59,
+    S3E_DEVICE_LANGUAGE_MARATHI = 60,
+    S3E_DEVICE_LANGUAGE_MOLDOVIAN = 61,
+    S3E_DEVICE_LANGUAGE_MONGOLIAN = 62,
+    S3E_DEVICE_LANGUAGE_PUNJABI = 63,
+    S3E_DEVICE_LANGUAGE_ROMANIAN = 64,
+    S3E_DEVICE_LANGUAGE_SINHALESE = 65,
+    S3E_DEVICE_LANGUAGE_SOMALI = 66,
+    S3E_DEVICE_LANGUAGE_SWAHILI = 67,
+    S3E_DEVICE_LANGUAGE_TAJIK = 68,
+    S3E_DEVICE_LANGUAGE_TAMIL = 69,
+    S3E_DEVICE_LANGUAGE_TELUGU = 70,
+    S3E_DEVICE_LANGUAGE_TIBETAN = 71,
+    S3E_DEVICE_LANGUAGE_TIGRINYA = 72,
+    S3E_DEVICE_LANGUAGE_TURKMEN = 73,
+    S3E_DEVICE_LANGUAGE_URDU = 74,
+    S3E_DEVICE_LANGUAGE_UZBEK = 75,
+    S3E_DEVICE_LANGUAGE_VIETNAMESE = 76,
+    S3E_DEVICE_LANGUAGE_WELSH = 77,
+    S3E_DEVICE_LANGUAGE_ZULU = 78
+} s3eDeviceLanguage;
+# 585 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDevice.h"
+typedef enum s3eDeviceArchitecture
+{
+    S3E_DEVICE_ARCHITECTURE_ARM4T = 0,
+    S3E_DEVICE_ARCHITECTURE_ARM4 = 1,
+    S3E_DEVICE_ARCHITECTURE_ARM5T = 2,
+    S3E_DEVICE_ARCHITECTURE_ARM5TE = 3,
+    S3E_DEVICE_ARCHITECTURE_ARM5TEJ = 4,
+    S3E_DEVICE_ARCHITECTURE_ARM6 = 5,
+    S3E_DEVICE_ARCHITECTURE_ARM6K = 6,
+    S3E_DEVICE_ARCHITECTURE_ARM6T2 = 7,
+    S3E_DEVICE_ARCHITECTURE_ARM6Z = 8,
+    S3E_DEVICE_ARCHITECTURE_ARM7 = 12,
+    S3E_DEVICE_ARCHITECTURE_X86 = 9,
+    S3E_DEVICE_ARCHITECTURE_PPC = 10,
+    S3E_DEVICE_ARCHITECTURE_AMD64 = 11,
+    S3E_DEVICE_ARCHITECTURE_MIPS = 13,
+     S3E_DEVICE_ARCHITECTURE_MAX = 14
+} s3eDeviceArchitecture;
+# 611 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDevice.h"
+typedef enum s3eDeviceSoftKeyPosition
+{
+    S3E_DEVICE_SOFTKEY_BOTTOM_LEFT = 0,
+    S3E_DEVICE_SOFTKEY_BOTTOM_RIGHT = 1,
+    S3E_DEVICE_SOFTKEY_TOP_RIGHT = 2,
+    S3E_DEVICE_SOFTKEY_TOP_LEFT = 3
+} s3eDeviceSoftKeyPosition;
+# 652 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDevice.h"
+extern "C" const char* s3eDeviceGetString(s3eDeviceProperty property);
+# 687 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDevice.h"
+extern "C" int32 s3eDeviceGetInt(s3eDeviceProperty property);
+# 707 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDevice.h"
+extern "C" s3eResult s3eDeviceSetInt(s3eDeviceProperty property, int32 value);
+# 735 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDevice.h"
+extern "C" int64 s3eDeviceYield(int32 ms =0);
+# 757 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDevice.h"
+extern "C" void s3eDeviceUnYield();
+# 785 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDevice.h"
+extern "C" void s3eDeviceYieldUntilEvent(int32 ms =0x7fffffffL);
+# 820 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDevice.h"
+extern "C" s3eResult s3eDeviceExecPushNext(const char* filename, const char* config_prepend =__null, const char* config_append =__null);
+# 836 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDevice.h"
+extern "C" void s3eDeviceExit(int code =0) __attribute__ ((noreturn));
+
+
+
+
+
+
+typedef enum s3eDeviceState
+{
+
+
+
+
+    S3E_DEVICE_STATE_PAUSED = 3,
+
+
+
+
+
+    S3E_DEVICE_STATE_EXITING = 4,
+
+
+
+
+    S3E_DEVICE_STATE_RUNNING = 5
+} s3eDeviceState;
+# 873 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDevice.h"
+typedef enum s3eDeviceCallback
+{
+# 886 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDevice.h"
+    S3E_DEVICE_PAUSE = 0,
+# 898 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDevice.h"
+    S3E_DEVICE_UNPAUSE = 1,
+# 910 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDevice.h"
+    S3E_DEVICE_EXIT = 2,
+# 926 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDevice.h"
+    S3E_DEVICE_VOL_UP = 17,
+# 942 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDevice.h"
+    S3E_DEVICE_VOL_DOWN = 18,
+# 960 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDevice.h"
+    S3E_DEVICE_MAINS_POWER_CHANGED = 20,
+# 972 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDevice.h"
+    S3E_DEVICE_BACKGROUND = 22,
+# 984 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDevice.h"
+    S3E_DEVICE_FOREGROUND = 23,
+# 998 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDevice.h"
+    S3E_DEVICE_NETWORK_ONLINE = 24,
+# 1012 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDevice.h"
+    S3E_DEVICE_NETWORK_OFFLINE = 25,
+# 1026 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDevice.h"
+    S3E_DEVICE_SIMULATOR_RESTART = 26,
+# 1042 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDevice.h"
+    S3E_DEVICE_APPLICATION_ACTIVE = 27,
+# 1058 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDevice.h"
+    S3E_DEVICE_APPLICATION_INACTIVE = 28,
+# 1074 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDevice.h"
+    S3E_DEVICE_APPLICATION_FULLSCREEN = 29,
+# 1090 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDevice.h"
+    S3E_DEVICE_APPLICATION_THUMBNAIL = 30,
+# 1106 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDevice.h"
+    S3E_DEVICE_APPLICATION_INVISIBLE = 31,
+
+    S3E_DEVICE_CALLBACK_MAX
+} s3eDeviceCallback;
+# 1127 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDevice.h"
+typedef struct s3eDeviceVolChangeInfo
+{
+
+
+
+
+
+    s3eBool m_VolUp;
+# 1152 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDevice.h"
+    s3eBool m_OverrideDefaultBehaviour;
+} s3eDeviceVolChangeInfo;
+
+
+
+
+
+typedef struct s3eDeviceStateChangeInfo
+{
+
+
+
+    int32 m_State;
+} s3eDeviceStateChangeInfo;
+# 1187 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDevice.h"
+extern "C" s3eResult s3eDeviceRegister(s3eDeviceCallback cbid, s3eCallback fn, void* userdata);
+# 1207 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDevice.h"
+extern "C" s3eResult s3eDeviceUnRegister(s3eDeviceCallback cbid, s3eCallback fn);
+
+
+
+
+
+
+
+extern "C" void s3eDeviceRequestQuit();
+# 1226 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDevice.h"
+extern "C" s3eBool s3eDeviceCheckQuitRequest();
+# 1236 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDevice.h"
+extern "C" s3eBool s3eDeviceCheckPauseRequest();
+# 1250 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/s3eDevice.h"
+extern "C" void s3eDeviceBacklightOn();
+
+
+extern "C" s3eBool s3eDeviceNetworkCheckStart();
+
+
+extern "C" s3eBool s3eDeviceNetworkCheckStop();
+
+
+extern "C" void s3eDeviceLoaderCallStart(s3eBool lock, void* function);
+
+
+extern "C" void s3eDeviceLoaderCallDone(s3eBool lock, void* function);
+# 18 "c:/dev/ahorvath_barium/depot/sdk/main/modules/iwcore/h/IwDebug.h" 2
+# 1 "c:/dev/ahorvath_barium/depot/sdk/main/modules/iwcore/h/IwCore.h" 1
+# 19 "c:/dev/ahorvath_barium/depot/sdk/main/modules/iwcore/h/IwDebug.h" 2
+
+
+# 1 "c:\\android-ndk-r8b\\toolchains\\arm-linux-androideabi-4.4.3\\prebuilt\\windows\\bin/../lib/gcc/arm-linux-androideabi/4.4.3/include/stdarg.h" 1 3 4
+# 40 "c:\\android-ndk-r8b\\toolchains\\arm-linux-androideabi-4.4.3\\prebuilt\\windows\\bin/../lib/gcc/arm-linux-androideabi/4.4.3/include/stdarg.h" 3 4
+typedef __builtin_va_list __gnuc_va_list;
+# 102 "c:\\android-ndk-r8b\\toolchains\\arm-linux-androideabi-4.4.3\\prebuilt\\windows\\bin/../lib/gcc/arm-linux-androideabi/4.4.3/include/stdarg.h" 3 4
+typedef __gnuc_va_list va_list;
+# 22 "c:/dev/ahorvath_barium/depot/sdk/main/modules/iwcore/h/IwDebug.h" 2
+# 1 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/stdio.h" 1
+# 41 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/stdio.h"
+# 1 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/sys/cdefs.h" 1
+# 59 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/sys/cdefs.h"
+# 1 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/sys/cdefs_elf.h" 1
+# 60 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/sys/cdefs.h" 2
+# 42 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/stdio.h" 2
+# 1 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/sys/_types.h" 1
+# 40 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/sys/_types.h"
+# 1 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/machine/_types.h" 1
+# 52 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/machine/_types.h"
+typedef signed char __int8_t;
+typedef unsigned char __uint8_t;
+typedef short __int16_t;
+typedef unsigned short __uint16_t;
+typedef int __int32_t;
+typedef unsigned int __uint32_t;
+
+typedef long long __int64_t;
+
+typedef unsigned long long __uint64_t;
+
+
+typedef __int8_t __int_least8_t;
+typedef __uint8_t __uint_least8_t;
+typedef __int16_t __int_least16_t;
+typedef __uint16_t __uint_least16_t;
+typedef __int32_t __int_least32_t;
+typedef __uint32_t __uint_least32_t;
+typedef __int64_t __int_least64_t;
+typedef __uint64_t __uint_least64_t;
+
+
+typedef __int32_t __int_fast8_t;
+typedef __uint32_t __uint_fast8_t;
+typedef __int32_t __int_fast16_t;
+typedef __uint32_t __uint_fast16_t;
+typedef __int32_t __int_fast32_t;
+typedef __uint32_t __uint_fast32_t;
+typedef __int64_t __int_fast64_t;
+typedef __uint64_t __uint_fast64_t;
+
+
+typedef int __intptr_t;
+typedef unsigned int __uintptr_t;
+
+
+typedef __int64_t __intmax_t;
+typedef __uint64_t __uintmax_t;
+
+
+typedef __int32_t __register_t;
+
+
+typedef unsigned long __vaddr_t;
+typedef unsigned long __paddr_t;
+typedef unsigned long __vsize_t;
+typedef unsigned long __psize_t;
+
+
+typedef int __clock_t;
+typedef int __clockid_t;
+typedef long __ptrdiff_t;
+typedef int __time_t;
+typedef int __timer_t;
+
+typedef __builtin_va_list __va_list;
+# 116 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/machine/_types.h"
+typedef int __wint_t;
+typedef int __rune_t;
+typedef void * __wctrans_t;
+typedef void * __wctype_t;
+# 41 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/sys/_types.h" 2
+
+typedef unsigned long __cpuid_t;
+typedef __int32_t __dev_t;
+typedef __uint32_t __fixpt_t;
+typedef __uint32_t __gid_t;
+typedef __uint32_t __id_t;
+typedef __uint32_t __in_addr_t;
+typedef __uint16_t __in_port_t;
+typedef __uint32_t __ino_t;
+typedef long __key_t;
+typedef __uint32_t __mode_t;
+typedef __uint32_t __nlink_t;
+typedef __int32_t __pid_t;
+typedef __uint64_t __rlim_t;
+typedef __uint16_t __sa_family_t;
+typedef __int32_t __segsz_t;
+typedef __uint32_t __socklen_t;
+typedef __int32_t __swblk_t;
+typedef __uint32_t __uid_t;
+typedef __uint32_t __useconds_t;
+typedef __int32_t __suseconds_t;
+
+
+
+
+
+typedef union {
+ char __mbstate8[128];
+ __int64_t __mbstateL;
+} __mbstate_t;
+# 43 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/stdio.h" 2
+
+
+
+
+
+
+
+# 1 "c:\\android-ndk-r8b\\toolchains\\arm-linux-androideabi-4.4.3\\prebuilt\\windows\\bin/../lib/gcc/arm-linux-androideabi/4.4.3/include/stddef.h" 1 3 4
+# 211 "c:\\android-ndk-r8b\\toolchains\\arm-linux-androideabi-4.4.3\\prebuilt\\windows\\bin/../lib/gcc/arm-linux-androideabi/4.4.3/include/stddef.h" 3 4
+typedef unsigned int size_t;
+# 51 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/stdio.h" 2
+
+# 1 "c:\\android-ndk-r8b\\toolchains\\arm-linux-androideabi-4.4.3\\prebuilt\\windows\\bin/../lib/gcc/arm-linux-androideabi/4.4.3/include/stddef.h" 1 3 4
+# 149 "c:\\android-ndk-r8b\\toolchains\\arm-linux-androideabi-4.4.3\\prebuilt\\windows\\bin/../lib/gcc/arm-linux-androideabi/4.4.3/include/stddef.h" 3 4
+typedef int ptrdiff_t;
+# 53 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/stdio.h" 2
+
+
+# 1 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/sys/types.h" 1
+# 33 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/sys/types.h"
+# 1 "c:\\android-ndk-r8b\\toolchains\\arm-linux-androideabi-4.4.3\\prebuilt\\windows\\bin/../lib/gcc/arm-linux-androideabi/4.4.3/include/stddef.h" 1 3 4
+# 34 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/sys/types.h" 2
+# 1 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/stdint.h" 1
+# 31 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/stdint.h"
+# 1 "c:\\android-ndk-r8b\\toolchains\\arm-linux-androideabi-4.4.3\\prebuilt\\windows\\bin/../lib/gcc/arm-linux-androideabi/4.4.3/include/stddef.h" 1 3 4
+# 32 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/stdint.h" 2
+# 48 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/stdint.h"
+typedef __int8_t int8_t;
+typedef __uint8_t uint8_t;
+typedef __int16_t int16_t;
+typedef __uint16_t uint16_t;
+typedef __int32_t int32_t;
+typedef __uint32_t uint32_t;
+
+typedef __int64_t int64_t;
+typedef __uint64_t uint64_t;
+
+
+
+
+
+
+typedef int8_t int_least8_t;
+typedef int8_t int_fast8_t;
+
+typedef uint8_t uint_least8_t;
+typedef uint8_t uint_fast8_t;
+# 97 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/stdint.h"
+typedef int16_t int_least16_t;
+typedef int32_t int_fast16_t;
+
+typedef uint16_t uint_least16_t;
+typedef uint32_t uint_fast16_t;
+# 130 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/stdint.h"
+typedef int32_t int_least32_t;
+typedef int32_t int_fast32_t;
+
+typedef uint32_t uint_least32_t;
+typedef uint32_t uint_fast32_t;
+# 163 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/stdint.h"
+typedef int64_t int_least64_t;
+typedef int64_t int_fast64_t;
+
+typedef uint64_t uint_least64_t;
+typedef uint64_t uint_fast64_t;
+# 207 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/stdint.h"
+typedef int intptr_t;
+typedef unsigned int uintptr_t;
+# 232 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/stdint.h"
+typedef uint64_t uintmax_t;
+typedef int64_t intmax_t;
+# 268 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/stdint.h"
+typedef long int ssize_t;
+# 35 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/sys/types.h" 2
+
+
+# 1 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/linux/posix_types.h" 1
+# 15 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/linux/posix_types.h"
+# 1 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/linux/stddef.h" 1
+# 15 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/linux/stddef.h"
+# 1 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/linux/compiler.h" 1
+# 16 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/linux/stddef.h" 2
+# 16 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/linux/posix_types.h" 2
+# 32 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/linux/posix_types.h"
+typedef struct {
+ unsigned long fds_bits [(1024/(8 * sizeof(unsigned long)))];
+} __kernel_fd_set;
+
+typedef void (*__kernel_sighandler_t)(int);
+
+typedef int __kernel_key_t;
+typedef int __kernel_mqd_t;
+
+# 1 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/asm/posix_types.h" 1
+# 15 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/asm/posix_types.h"
+typedef unsigned long __kernel_ino_t;
+typedef unsigned short __kernel_mode_t;
+typedef unsigned short __kernel_nlink_t;
+typedef long __kernel_off_t;
+typedef int __kernel_pid_t;
+typedef unsigned short __kernel_ipc_pid_t;
+typedef unsigned short __kernel_uid_t;
+typedef unsigned short __kernel_gid_t;
+typedef unsigned int __kernel_size_t;
+typedef int __kernel_ssize_t;
+typedef int __kernel_ptrdiff_t;
+typedef long __kernel_time_t;
+typedef long __kernel_suseconds_t;
+typedef long __kernel_clock_t;
+typedef int __kernel_timer_t;
+typedef int __kernel_clockid_t;
+typedef int __kernel_daddr_t;
+typedef char * __kernel_caddr_t;
+typedef unsigned short __kernel_uid16_t;
+typedef unsigned short __kernel_gid16_t;
+typedef unsigned int __kernel_uid32_t;
+typedef unsigned int __kernel_gid32_t;
+
+typedef unsigned short __kernel_old_uid_t;
+typedef unsigned short __kernel_old_gid_t;
+typedef unsigned short __kernel_old_dev_t;
+
+
+typedef long long __kernel_loff_t;
+
+
+typedef struct {
+
+
+
+ int __val[2];
+
+} __kernel_fsid_t;
+# 42 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/linux/posix_types.h" 2
+# 38 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/sys/types.h" 2
+# 1 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/asm/types.h" 1
+# 17 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/asm/types.h"
+typedef unsigned short umode_t;
+
+typedef __signed__ char __s8;
+typedef unsigned char __u8;
+
+typedef __signed__ short __s16;
+typedef unsigned short __u16;
+
+typedef __signed__ int __s32;
+typedef unsigned int __u32;
+
+
+typedef __signed__ long long __s64;
+typedef unsigned long long __u64;
+# 39 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/sys/types.h" 2
+# 1 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/linux/types.h" 1
+# 21 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/linux/types.h"
+typedef __u16 __le16;
+typedef __u16 __be16;
+typedef __u32 __le32;
+typedef __u32 __be32;
+
+typedef __u64 __le64;
+typedef __u64 __be64;
+
+
+struct ustat {
+ __kernel_daddr_t f_tfree;
+ __kernel_ino_t f_tinode;
+ char f_fname[6];
+ char f_fpack[6];
+};
+# 40 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/sys/types.h" 2
+# 1 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/machine/kernel.h" 1
+# 34 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/machine/kernel.h"
+typedef unsigned long __kernel_blkcnt_t;
+typedef unsigned long __kernel_blksize_t;
+
+
+typedef unsigned long __kernel_fsblkcnt_t;
+typedef unsigned long __kernel_fsfilcnt_t;
+typedef unsigned int __kernel_id_t;
+# 41 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/sys/types.h" 2
+
+typedef __u32 __kernel_dev_t;
+# 52 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/sys/types.h"
+typedef __kernel_blkcnt_t blkcnt_t;
+typedef __kernel_blksize_t blksize_t;
+typedef __kernel_clock_t clock_t;
+typedef __kernel_clockid_t clockid_t;
+typedef __kernel_dev_t dev_t;
+typedef __kernel_fsblkcnt_t fsblkcnt_t;
+typedef __kernel_fsfilcnt_t fsfilcnt_t;
+typedef __kernel_gid32_t gid_t;
+typedef __kernel_id_t id_t;
+typedef __kernel_ino_t ino_t;
+typedef __kernel_key_t key_t;
+typedef __kernel_mode_t mode_t;
+typedef __kernel_nlink_t nlink_t;
+
+
+typedef __kernel_off_t off_t;
+
+typedef __kernel_loff_t loff_t;
+typedef loff_t off64_t;
+
+typedef __kernel_pid_t pid_t;
+# 99 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/sys/types.h"
+typedef __kernel_suseconds_t suseconds_t;
+typedef __kernel_time_t time_t;
+typedef __kernel_uid32_t uid_t;
+typedef signed long useconds_t;
+
+typedef __kernel_daddr_t daddr_t;
+typedef __kernel_timer_t timer_t;
+typedef __kernel_mqd_t mqd_t;
+
+typedef __kernel_caddr_t caddr_t;
+typedef unsigned int uint_t;
+typedef unsigned int uint;
+
+
+# 1 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/sys/sysmacros.h" 1
+# 36 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/sys/sysmacros.h"
+static __inline__ int major(dev_t _dev)
+{
+  return (_dev >> 8) & 0xfff;
+}
+
+static __inline__ int minor(dev_t _dev)
+{
+  return (_dev & 0xff) | ((_dev >> 12) & 0xfff00);
+}
+
+static __inline__ dev_t makedev(int __ma, int __mi)
+{
+  return ((__ma & 0xfff) << 8) | (__mi & 0xff) | ((__mi & 0xfff00) << 12);
+}
+# 114 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/sys/types.h" 2
+
+
+typedef unsigned char u_char;
+typedef unsigned short u_short;
+typedef unsigned int u_int;
+typedef unsigned long u_long;
+
+typedef uint32_t u_int32_t;
+typedef uint16_t u_int16_t;
+typedef uint8_t u_int8_t;
+typedef uint64_t u_int64_t;
+# 56 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/stdio.h" 2
+# 78 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/stdio.h"
+typedef off_t fpos_t;
+# 87 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/stdio.h"
+struct __sbuf {
+ unsigned char *_base;
+ int _size;
+};
+# 119 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/stdio.h"
+typedef struct __sFILE {
+ unsigned char *_p;
+ int _r;
+ int _w;
+ short _flags;
+ short _file;
+ struct __sbuf _bf;
+ int _lbfsize;
+
+
+ void *_cookie;
+ int (*_close)(void *);
+ int (*_read)(void *, char *, int);
+ fpos_t (*_seek)(void *, fpos_t, int);
+ int (*_write)(void *, const char *, int);
+
+
+ struct __sbuf _ext;
+
+ unsigned char *_up;
+ int _ur;
+
+
+ unsigned char _ubuf[3];
+ unsigned char _nbuf[1];
+
+
+ struct __sbuf _lb;
+
+
+ int _blksize;
+ fpos_t _offset;
+} FILE;
+
+extern "C" {
+extern FILE __sF[];
+}
+# 223 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/stdio.h"
+extern "C" {
+void clearerr(FILE *);
+int fclose(FILE *);
+int feof(FILE *);
+int ferror(FILE *);
+int fflush(FILE *);
+int fgetc(FILE *);
+int fgetpos(FILE *, fpos_t *);
+char *fgets(char *, int, FILE *);
+FILE *fopen(const char *, const char *);
+int fprintf(FILE *, const char *, ...);
+int fputc(int, FILE *);
+int fputs(const char *, FILE *);
+size_t fread(void *, size_t, size_t, FILE *);
+FILE *freopen(const char *, const char *, FILE *);
+int fscanf(FILE *, const char *, ...);
+int fseek(FILE *, long, int);
+int fseeko(FILE *, off_t, int);
+int fsetpos(FILE *, const fpos_t *);
+long ftell(FILE *);
+off_t ftello(FILE *);
+size_t fwrite(const void *, size_t, size_t, FILE *);
+int getc(FILE *);
+int getchar(void);
+char *gets(char *);
+
+
+
+extern int sys_nerr;
+extern char *sys_errlist[];
+
+void perror(const char *);
+int printf(const char *, ...);
+int putc(int, FILE *);
+int putchar(int);
+int puts(const char *);
+int remove(const char *);
+int rename(const char *, const char *);
+void rewind(FILE *);
+int scanf(const char *, ...);
+void setbuf(FILE *, char *);
+int setvbuf(FILE *, char *, int, size_t);
+int sprintf(char *, const char *, ...);
+int sscanf(const char *, const char *, ...);
+FILE *tmpfile(void);
+char *tmpnam(char *);
+int ungetc(int, FILE *);
+int vfprintf(FILE *, const char *, __va_list);
+int vprintf(const char *, __va_list);
+int vsprintf(char *, const char *, __va_list);
+
+
+int snprintf(char *, size_t, const char *, ...)
+  __attribute__((__format__ (printf, 3, 4)))
+  __attribute__((__nonnull__ (3)));
+int vfscanf(FILE *, const char *, __va_list)
+  __attribute__((__format__ (scanf, 2, 0)))
+  __attribute__((__nonnull__ (2)));
+int vscanf(const char *, __va_list)
+  __attribute__((__format__ (scanf, 1, 0)))
+  __attribute__((__nonnull__ (1)));
+int vsnprintf(char *, size_t, const char *, __va_list)
+  __attribute__((__format__ (printf, 3, 0)))
+  __attribute__((__nonnull__ (3)));
+int vsscanf(const char *, const char *, __va_list)
+  __attribute__((__format__ (scanf, 2, 0)))
+  __attribute__((__nonnull__ (2)));
+
+
+}
+# 302 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/stdio.h"
+extern "C" {
+
+
+
+
+FILE *fdopen(int, const char *);
+int fileno(FILE *);
+
+
+int pclose(FILE *);
+FILE *popen(const char *, const char *);
+
+
+
+void flockfile(FILE *);
+int ftrylockfile(FILE *);
+void funlockfile(FILE *);
+
+
+
+
+
+int getc_unlocked(FILE *);
+int getchar_unlocked(void);
+int putc_unlocked(int, FILE *);
+int putchar_unlocked(int);
+
+
+
+char *tempnam(const char *, const char *);
+
+}
+
+
+
+
+
+
+
+extern "C" {
+int asprintf(char **, const char *, ...)
+  __attribute__((__format__ (printf, 2, 3)))
+  __attribute__((__nonnull__ (2)));
+char *fgetln(FILE *, size_t *);
+int fpurge(FILE *);
+int getw(FILE *);
+int putw(int, FILE *);
+void setbuffer(FILE *, char *, int);
+int setlinebuf(FILE *);
+int vasprintf(char **, const char *, __va_list)
+  __attribute__((__format__ (printf, 2, 0)))
+  __attribute__((__nonnull__ (2)));
+}
+
+
+
+
+extern "C" {
+FILE *funopen(const void *,
+  int (*)(void *, char *, int),
+  int (*)(void *, const char *, int),
+  fpos_t (*)(void *, fpos_t, int),
+  int (*)(void *));
+}
+
+
+
+
+
+
+
+extern "C" {
+int __srget(FILE *);
+int __swbuf(int, FILE *);
+}
+
+
+
+
+
+
+
+static inline int __sputc(int _c, FILE *_p) {
+ if (--_p->_w >= 0 || (_p->_w >= _p->_lbfsize && (char)_c != '\n'))
+  return (*_p->_p++ = _c);
+ else
+  return (__swbuf(_c, _p));
+}
+# 449 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/stdio.h"
+int fdprintf(int, const char*, ...);
+int vfdprintf(int, const char*, __va_list);
+# 23 "c:/dev/ahorvath_barium/depot/sdk/main/modules/iwcore/h/IwDebug.h" 2
+# 1 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/stdlib.h" 1
+# 37 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/stdlib.h"
+# 1 "c:\\android-ndk-r8b\\toolchains\\arm-linux-androideabi-4.4.3\\prebuilt\\windows\\bin/../lib/gcc/arm-linux-androideabi/4.4.3/include/stddef.h" 1 3 4
+# 38 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/stdlib.h" 2
+
+# 1 "c:\\android-ndk-r8b\\toolchains\\arm-linux-androideabi-4.4.3\\prebuilt\\windows\\bin/../lib/gcc/arm-linux-androideabi/4.4.3/include/stddef.h" 1 3 4
+# 40 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/stdlib.h" 2
+# 1 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/string.h" 1
+# 32 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/string.h"
+# 1 "c:\\android-ndk-r8b\\toolchains\\arm-linux-androideabi-4.4.3\\prebuilt\\windows\\bin/../lib/gcc/arm-linux-androideabi/4.4.3/include/stddef.h" 1 3 4
+# 33 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/string.h" 2
+# 1 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/malloc.h" 1
+# 32 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/malloc.h"
+# 1 "c:\\android-ndk-r8b\\toolchains\\arm-linux-androideabi-4.4.3\\prebuilt\\windows\\bin/../lib/gcc/arm-linux-androideabi/4.4.3/include/stddef.h" 1 3 4
+# 33 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/malloc.h" 2
+
+extern "C" {
+
+extern __attribute__((malloc)) void* malloc(size_t);
+extern __attribute__((malloc)) void* calloc(size_t, size_t);
+extern __attribute__((malloc)) void* realloc(void *, size_t);
+extern void free(void *);
+
+extern void* memalign(size_t alignment, size_t bytesize);
+extern void* valloc(size_t bytesize);
+extern void* pvalloc(size_t bytesize);
+extern int mallopt(int param_number, int param_value);
+extern size_t malloc_footprint(void);
+extern size_t malloc_max_footprint(void);
+
+struct mallinfo {
+    size_t arena;
+    size_t ordblks;
+    size_t smblks;
+    size_t hblks;
+    size_t hblkhd;
+    size_t usmblks;
+    size_t fsmblks;
+    size_t uordblks;
+    size_t fordblks;
+    size_t keepcost;
+};
+
+extern struct mallinfo mallinfo(void);
+# 78 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/malloc.h"
+extern size_t malloc_usable_size(void* block);
+# 99 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/malloc.h"
+extern void malloc_stats(void);
+
+}
+# 34 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/string.h" 2
+
+extern "C" {
+
+extern void* memccpy(void *, const void *, int, size_t);
+extern void* memchr(const void *, int, size_t);
+extern void* memrchr(const void *, int, size_t);
+extern int memcmp(const void *, const void *, size_t);
+extern void* memcpy(void *, const void *, size_t);
+extern void* memmove(void *, const void *, size_t);
+extern void* memset(void *, int, size_t);
+extern void* memmem(const void *, size_t, const void *, size_t);
+extern void memswap(void *, void *, size_t);
+
+extern char* index(const char *, int);
+extern char* rindex(const char *, int);
+extern char* strchr(const char *, int);
+extern char* strrchr(const char *, int);
+
+extern size_t strlen(const char *);
+extern int strcmp(const char *, const char *);
+extern char* strcpy(char *, const char *);
+extern char* strcat(char *, const char *);
+
+extern int strcasecmp(const char *, const char *);
+extern int strncasecmp(const char *, const char *, size_t);
+extern char* strdup(const char *);
+
+extern char* strstr(const char *, const char *);
+extern char* strcasestr(const char *haystack, const char *needle);
+extern char* strtok(char *, const char *);
+extern char* strtok_r(char *, const char *, char**);
+
+extern char* strerror(int);
+extern int strerror_r(int errnum, char *buf, size_t n);
+
+extern size_t strnlen(const char *, size_t);
+extern char* strncat(char *, const char *, size_t);
+extern char* strndup(const char *, size_t);
+extern int strncmp(const char *, const char *, size_t);
+extern char* strncpy(char *, const char *, size_t);
+
+extern size_t strlcat(char *, const char *, size_t);
+extern size_t strlcpy(char *, const char *, size_t);
+
+extern size_t strcspn(const char *, const char *);
+extern char* strpbrk(const char *, const char *);
+extern char* strsep(char **, const char *);
+extern size_t strspn(const char *, const char *);
+
+extern char* strsignal(int sig);
+
+extern int strcoll(const char *, const char *);
+extern size_t strxfrm(char *, const char *, size_t);
+
+}
+# 41 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/stdlib.h" 2
+# 1 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/alloca.h" 1
+# 42 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/stdlib.h" 2
+# 1 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/strings.h" 1
+# 45 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/strings.h"
+extern "C" {
+int bcmp(const void *, const void *, size_t);
+void bcopy(const void *, void *, size_t);
+void bzero(void *, size_t);
+int ffs(int);
+char *index(const char *, int);
+char *rindex(const char *, int);
+int strcasecmp(const char *, const char *);
+int strncasecmp(const char *, const char *, size_t);
+}
+# 43 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/stdlib.h" 2
+# 1 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/memory.h" 1
+# 44 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/stdlib.h" 2
+
+extern "C" {
+
+
+
+
+extern __attribute__((__noreturn__)) void exit(int);
+extern __attribute__((__noreturn__)) void abort(void);
+extern int atexit(void (*)(void));
+
+extern char *getenv(const char *);
+extern int putenv(const char *);
+extern int setenv(const char *, const char *, int);
+extern int unsetenv(const char *);
+extern int clearenv(void);
+
+extern char *mktemp (char *);
+extern int mkstemp (char *);
+
+extern long strtol(const char *, char **, int);
+extern long long strtoll(const char *, char **, int);
+extern unsigned long strtoul(const char *, char **, int);
+extern unsigned long long strtoull(const char *, char **, int);
+extern double strtod(const char *nptr, char **endptr);
+
+static __inline__ float strtof(const char *nptr, char **endptr)
+{
+    return (float)strtod(nptr, endptr);
+}
+
+extern int atoi(const char *);
+extern long atol(const char *);
+extern long long atoll(const char *);
+
+static __inline__ double atof(const char *nptr)
+{
+    return (strtod(nptr, __null));
+}
+
+static __inline__ int abs(int __n) {
+    return (__n < 0) ? -__n : __n;
+}
+
+static __inline__ long labs(long __n) {
+    return (__n < 0L) ? -__n : __n;
+}
+
+static __inline__ long long llabs(long long __n) {
+    return (__n < 0LL) ? -__n : __n;
+}
+
+extern char * realpath(const char *path, char *resolved);
+extern int system(const char * string);
+
+extern void * bsearch(const void *key, const void *base0,
+ size_t nmemb, size_t size,
+ int (*compar)(const void *, const void *));
+
+extern void qsort(void *, size_t, size_t, int (*)(const void *, const void *));
+
+extern long jrand48(unsigned short *);
+extern long mrand48(void);
+extern long nrand48(unsigned short *);
+extern long lrand48(void);
+extern unsigned short *seed48(unsigned short*);
+extern double erand48(unsigned short xsubi[3]);
+extern double drand48(void);
+extern void srand48(long);
+extern unsigned int arc4random(void);
+extern void arc4random_stir(void);
+extern void arc4random_addrandom(unsigned char *, int);
+
+
+static __inline__ int rand(void) {
+    return (int)lrand48();
+}
+static __inline__ void srand(unsigned int __s) {
+    srand48(__s);
+}
+static __inline__ long random(void)
+{
+    return lrand48();
+}
+static __inline__ void srandom(unsigned int __s)
+{
+    srand48(__s);
+}
+
+
+
+extern int unlockpt(int);
+extern char* ptsname(int);
+extern int ptsname_r(int, char*, size_t);
+extern int getpt(void);
+
+static __inline__ int grantpt(int __fd __attribute((unused)))
+{
+  (void)__fd;
+  return 0;
+}
+
+typedef struct {
+    int quot;
+    int rem;
+} div_t;
+
+extern div_t div(int, int);
+
+typedef struct {
+    long int quot;
+    long int rem;
+} ldiv_t;
+
+extern ldiv_t ldiv(long, long);
+
+typedef struct {
+    long long int quot;
+    long long int rem;
+} lldiv_t;
+
+extern lldiv_t lldiv(long long, long long);
+
+
+
+extern int mblen(const char *, size_t);
+extern size_t mbstowcs(wchar_t *, const char *, size_t);
+extern int mbtowc(wchar_t *, const char *, size_t);
+
+
+extern int wctomb(char *, wchar_t);
+extern size_t wcstombs(char *, const wchar_t *, size_t);
+# 183 "c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include/stdlib.h"
+}
+# 24 "c:/dev/ahorvath_barium/depot/sdk/main/modules/iwcore/h/IwDebug.h" 2
+# 51 "c:/dev/ahorvath_barium/depot/sdk/main/modules/iwcore/h/IwDebug.h"
+typedef void(*IwAssertTextCallback)(char* pBuffer);
+
+extern "C" {
+
+typedef s3eErrorShowResult(*IwAssertCallback)(const char* channel, const char* pExpr, const char* pFilename, int32 line, const char* message);
+typedef s3eErrorShowResult(*IwErrorCallback)(const char* message);
+# 65 "c:/dev/ahorvath_barium/depot/sdk/main/modules/iwcore/h/IwDebug.h"
+ s3eBool IwDebugTraceIsChannelOn(const char* channel, s3eBool default_on);
+# 74 "c:/dev/ahorvath_barium/depot/sdk/main/modules/iwcore/h/IwDebug.h"
+void IwDebugTraceDisable(s3eBool disable);
+
+
+
+
+ void IwDebugTraceSetTraceChannel(const char* channel);
+# 91 "c:/dev/ahorvath_barium/depot/sdk/main/modules/iwcore/h/IwDebug.h"
+ s3eBool IwDebugTraceChannelSwitch(const char* channel, s3eBool new_state);
+# 101 "c:/dev/ahorvath_barium/depot/sdk/main/modules/iwcore/h/IwDebug.h"
+ void IwDebugTraceLinePrintf(const char* fmt, ...)
+
+__attribute__((format(printf, 1, 2)))
+
+;
+
+
+
+
+
+
+ void IwDebugTraceLineVPrintf(const char* fmt, va_list args);
+
+
+ void IwDebugAssertSetUID(uint32 n);
+
+
+
+
+
+
+
+ s3eBool IwDebugAssertIsChannelOn(const char* channel);
+
+
+
+
+
+
+
+ void IwDebugClearConfigCache();
+# 141 "c:/dev/ahorvath_barium/depot/sdk/main/modules/iwcore/h/IwDebug.h"
+ void IwDebugAssertSetMessage(const char* fmt, ...)
+
+__attribute__((format(printf, 1, 2)))
+
+;
+# 156 "c:/dev/ahorvath_barium/depot/sdk/main/modules/iwcore/h/IwDebug.h"
+ void IwDebugAssertSetSolution(const char* fmt, ...)
+
+__attribute__((format(printf, 1, 2)))
+
+;
+
+
+
+
+
+
+
+ s3eErrorShowResult IwDebugAssertShow(const char* pExpr, const char* pFilename, int32 line, uint8 ignorable);
+
+
+
+
+
+
+ IwAssertTextCallback IwAssertRegisterTextCallback(IwAssertTextCallback fn);
+
+
+
+
+
+
+ IwAssertCallback IwAssertRegisterCallback(IwAssertCallback fn);
+# 192 "c:/dev/ahorvath_barium/depot/sdk/main/modules/iwcore/h/IwDebug.h"
+ s3eErrorShowResult IwDebugErrorShow(const char* Args, ...)
+
+__attribute__((format(printf, 1, 2)))
+
+;
+
+
+
+
+
+
+ IwErrorCallback IwDebugErrorRegisterCallback(IwErrorCallback fn);
+
+}
+# 347 "c:/dev/ahorvath_barium/depot/sdk/main/modules/iwcore/h/IwDebug.h"
+    static inline void IwDebugExit()
+    {
+        abort();
+    }
+# 573 "c:/dev/ahorvath_barium/depot/sdk/main/modules/iwcore/h/IwDebug.h"
+# 1 "c:/android-ndk-r8b/sources/cxx-stl/gnu-libstdc++/4.4.3/include/typeinfo" 1
+# 34 "c:/android-ndk-r8b/sources/cxx-stl/gnu-libstdc++/4.4.3/include/typeinfo"
+# 1 "c:/android-ndk-r8b/sources/cxx-stl/gnu-libstdc++/4.4.3/include/exception" 1
+# 35 "c:/android-ndk-r8b/sources/cxx-stl/gnu-libstdc++/4.4.3/include/exception"
+#pragma GCC visibility push(default)
+
+# 1 "c:/android-ndk-r8b/sources/cxx-stl/gnu-libstdc++/4.4.3/libs/armeabi/include/bits/c++config.h" 1
+# 243 "c:/android-ndk-r8b/sources/cxx-stl/gnu-libstdc++/4.4.3/libs/armeabi/include/bits/c++config.h"
+# 1 "c:/android-ndk-r8b/sources/cxx-stl/gnu-libstdc++/4.4.3/libs/armeabi/include/bits/os_defines.h" 1
+# 244 "c:/android-ndk-r8b/sources/cxx-stl/gnu-libstdc++/4.4.3/libs/armeabi/include/bits/c++config.h" 2
+
+
+# 1 "c:/android-ndk-r8b/sources/cxx-stl/gnu-libstdc++/4.4.3/libs/armeabi/include/bits/cpu_defines.h" 1
+# 247 "c:/android-ndk-r8b/sources/cxx-stl/gnu-libstdc++/4.4.3/libs/armeabi/include/bits/c++config.h" 2
+# 38 "c:/android-ndk-r8b/sources/cxx-stl/gnu-libstdc++/4.4.3/include/exception" 2
+
+extern "C++" {
+
+namespace std
+{
+# 59 "c:/android-ndk-r8b/sources/cxx-stl/gnu-libstdc++/4.4.3/include/exception"
+  class exception
+  {
+  public:
+    exception() throw() { }
+    virtual ~exception() throw();
+
+
+
+    virtual const char* what() const throw();
+  };
+
+
+
+  class bad_exception : public exception
+  {
+  public:
+    bad_exception() throw() { }
+
+
+
+    virtual ~bad_exception() throw();
+
+
+    virtual const char* what() const throw();
+  };
+
+
+  typedef void (*terminate_handler) ();
+
+
+  typedef void (*unexpected_handler) ();
+
+
+  terminate_handler set_terminate(terminate_handler) throw();
+
+
+
+  void terminate() __attribute__ ((__noreturn__));
+
+
+  unexpected_handler set_unexpected(unexpected_handler) throw();
+
+
+
+  void unexpected() __attribute__ ((__noreturn__));
+# 115 "c:/android-ndk-r8b/sources/cxx-stl/gnu-libstdc++/4.4.3/include/exception"
+  bool uncaught_exception() throw();
+
+
+}
+
+namespace __gnu_cxx __attribute__ ((__visibility__ ("default"))) {
+# 138 "c:/android-ndk-r8b/sources/cxx-stl/gnu-libstdc++/4.4.3/include/exception"
+  void __verbose_terminate_handler();
+
+}
+
+}
+
+#pragma GCC visibility pop
+# 35 "c:/android-ndk-r8b/sources/cxx-stl/gnu-libstdc++/4.4.3/include/typeinfo" 2
+
+#pragma GCC visibility push(default)
+
+extern "C++" {
+
+namespace __cxxabiv1
+{
+  class __class_type_info;
+}
+# 80 "c:/android-ndk-r8b/sources/cxx-stl/gnu-libstdc++/4.4.3/include/typeinfo"
+namespace std
+{
+
+
+
+
+
+
+  class type_info
+  {
+  public:
+
+
+
+
+    virtual ~type_info();
+
+
+
+    const char* name() const
+    { return __name; }
+
+
+    bool before(const type_info& __arg) const;
+
+
+
+
+    bool operator==(const type_info& __arg) const;
+# 123 "c:/android-ndk-r8b/sources/cxx-stl/gnu-libstdc++/4.4.3/include/typeinfo"
+    bool operator!=(const type_info& __arg) const
+    { return !operator==(__arg); }
+
+
+    virtual bool __is_pointer_p() const;
+
+
+    virtual bool __is_function_p() const;
+
+
+
+
+
+
+
+    virtual bool __do_catch(const type_info *__thr_type, void **__thr_obj,
+       unsigned __outer) const;
+
+
+    virtual bool __do_upcast(const __cxxabiv1::__class_type_info *__target,
+        void **__obj_ptr) const;
+
+  protected:
+    const char *__name;
+
+    explicit type_info(const char *__n): __name(__n) { }
+
+  private:
+
+    type_info& operator=(const type_info&);
+    type_info(const type_info&);
+  };
+
+
+
+
+
+
+
+  class bad_cast : public exception
+  {
+  public:
+    bad_cast() throw() { }
+
+
+
+    virtual ~bad_cast() throw();
+
+
+    virtual const char* what() const throw();
+  };
+
+
+
+
+
+  class bad_typeid : public exception
+  {
+  public:
+    bad_typeid () throw() { }
+
+
+
+    virtual ~bad_typeid() throw();
+
+
+    virtual const char* what() const throw();
+  };
+}
+
+#pragma GCC visibility pop
+
+}
+# 574 "c:/dev/ahorvath_barium/depot/sdk/main/modules/iwcore/h/IwDebug.h" 2
+
+
+template <class _To, class _From>
+_To IwSafeCast(_From from)
+{
+
+    if (from != __null && dynamic_cast<_To>(from) == __null)
+        {
+            const std::type_info& srctype = typeid(*from);
+            const char* src = srctype.name();
+            const char* target = typeid(_To).name();
+            do { do { static uint8 _s_IwAssertIgnoreThis = 0;; if ((!(false)) && (IwDebugAssertIsChannelOn("CORE")) && (_s_IwAssertIgnoreThis==0)) { IwDebugAssertSetSolution (__null); IwDebugAssertSetUID(0); IwDebugAssertSetMessage ("Mis-casting pointer: 0x%p is a pointer to type '%s', which is not derived from '%s'", from, src, target); switch (IwDebugAssertShow("false", "c:/dev/ahorvath_barium/depot/sdk/main/modules/iwcore/h/IwDebug.h", 586, (1))) { case S3E_ERROR_SHOW_STOP: do { if (s3eDebugIsDebuggerPresent()) do {if (s3eDebugIsDebuggerPresent()) *(int*)0xfffffff4 = 0; } while(0); else IwDebugExit(); } while(0); break; case S3E_ERROR_SHOW_IGNORE: _s_IwAssertIgnoreThis = 1;; break; default:; } IwDebugAssertSetUID(0); } } while (0); } while (0);
+
+    }
+
+    return static_cast <_To> (from);
+}
+# 14 "C:\\Users\\ahorvath\\Documents\\GitHub\\s3eGooglePlayGames\\source\\generic\\s3eGooglePlayGames_register.cpp" 2
+# 1 "../source/h/s3eGooglePlayGames_autodefs.h" 1
+# 15 "C:\\Users\\ahorvath\\Documents\\GitHub\\s3eGooglePlayGames\\source\\generic\\s3eGooglePlayGames_register.cpp" 2
+# 1 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/edk/h/s3eEdk.h" 1
+# 18 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/edk/h/s3eEdk.h"
+extern "C" {
+# 68 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/edk/h/s3eEdk.h"
+typedef void (*s3eEdkCallbackCompleteFn)(uint32 extID, int32 notification, void* systemData, void* instance, int32 returnCode, void* completeData);
+# 80 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/edk/h/s3eEdk.h"
+typedef int32 (*s3eEdkCallbackSpecific) (void* instance, void* systemData, void* userData);
+# 95 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/edk/h/s3eEdk.h"
+enum s3eEdkCallback
+{
+# 105 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/edk/h/s3eEdk.h"
+    S3E_EDK_IPHONE_OSROTATION = 100,
+
+
+
+
+
+    S3E_EDK_IPHONE_APPLICATIONDIDBECOMEACTIVE,
+
+
+
+
+
+    S3E_EDK_IPHONE_APPLICATIONWILLRESIGNACTIVE,
+
+
+
+
+
+    S3E_EDK_IPHONE_APPLICATIONDIDENTERBACKGROUND,
+
+
+
+
+
+    S3E_EDK_IPHONE_APPLICATIONWILLENTERFOREGROUND,
+# 141 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/edk/h/s3eEdk.h"
+    S3E_EDK_IPHONE_DID_RECEIVE_LOCAL_NOTIFICATION,
+# 153 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/edk/h/s3eEdk.h"
+    S3E_EDK_IPHONE_DID_RECEIVE_REMOTE_NOTIFICATION,
+
+
+
+
+
+    S3E_EDK_IPHONE_HANDLEOPENURL,
+
+    S3E_EDK_CALLBACK_MAX
+};
+# 213 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/edk/h/s3eEdk.h"
+extern "C" s3eResult s3eEdkCallbacksEnqueue(uint32 extID,
+                                 int notification,
+                                 void* systemData =__null,
+                                 int sysDataSize =0,
+                                 void* instance =__null,
+                                 s3eBool oneShot =(0),
+                                 s3eEdkCallbackCompleteFn =__null,
+                                 void* completeData =__null);
+# 287 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/edk/h/s3eEdk.h"
+extern "C" s3eResult s3eEdkCallbacksRegister(uint32 extID,
+                                  int maxNotification,
+                                  int notification,
+                                  s3eCallback callback,
+                                  void* userData,
+                                  s3eBool requireUnique);
+# 341 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/edk/h/s3eEdk.h"
+extern "C" s3eResult s3eEdkCallbacksRegisterSpecific(uint32 extID,
+                                          int maxNotification,
+                                          int notification,
+                                          s3eEdkCallbackSpecific callback,
+                                          void* userData,
+                                          s3eBool requireUnique,
+                                          void* instance);
+# 400 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/edk/h/s3eEdk.h"
+extern "C" s3eResult s3eEdkCallbacksRegisterInternal(uint32 extID,
+                                                     int32 maxNotification,
+                                                     int notification,
+                                                     s3eCallback callback,
+                                                     void* userData,
+                                                     s3eBool requireUnique);
+# 429 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/edk/h/s3eEdk.h"
+extern "C" s3eResult s3eEdkCallbacksUnRegister(uint32 extID,
+                                    int maxNotification,
+                                    int notification,
+                                    s3eCallback callback,
+                                    void* instance =__null);
+# 449 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/edk/h/s3eEdk.h"
+extern "C" void s3eEdkCallbacksUnRegisterDevice(uint32 extID, void* instance =__null);
+# 463 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/edk/h/s3eEdk.h"
+extern "C" s3eBool s3eEdkCallbacksIsRegistered(uint32 extID, int32 notification, void* instance =__null);
+# 506 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/edk/h/s3eEdk.h"
+void s3eEdkSurfaceSetSize(s3eBool synchronous =(0), int width =0, int height =0, int pitch =0);
+# 525 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/edk/h/s3eEdk.h"
+extern "C" void* s3eEdkMallocOS(int size, s3eBool bMsgOnFail =1);
+# 537 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/edk/h/s3eEdk.h"
+extern "C" void* s3eEdkReallocOS(void* item, int size, s3eBool bMsgOnFail =1);
+
+
+
+
+
+
+extern "C" void s3eEdkFreeOS(void* item);
+# 562 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/edk/h/s3eEdk.h"
+extern "C" s3eBool s3eEdkIsInitialised(uint32 extID);
+# 574 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/edk/h/s3eEdk.h"
+typedef void s3eEdkDLLHandle;
+# 587 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/edk/h/s3eEdk.h"
+extern "C" s3eEdkDLLHandle* s3eEdkLibraryOpen(const char* name);
+# 607 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/edk/h/s3eEdk.h"
+extern "C" void* s3eEdkLibraryGetSymbol(s3eEdkDLLHandle* handle, const char* name);
+# 619 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/edk/h/s3eEdk.h"
+extern "C" s3eResult s3eEdkLibraryClose(s3eEdkDLLHandle* handle);
+# 628 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/edk/h/s3eEdk.h"
+extern "C" const char* s3eEdkLibraryError();
+# 643 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/edk/h/s3eEdk.h"
+typedef void* (*s3eEdkThreadFunc)();
+
+
+
+
+
+
+
+typedef void (*s3eEdkThreadVoidFunc)();
+# 664 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/edk/h/s3eEdk.h"
+void* s3eEdkThreadRunOnOS(s3eEdkThreadFunc fn, int n_args, ...);
+
+
+
+
+
+extern "C" void* s3eEdkThreadRunOnOSV(s3eEdkThreadFunc fn, int n_args, va_list args);
+# 683 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/edk/h/s3eEdk.h"
+void s3eEdkThreadRunOnOSAsync(s3eEdkThreadVoidFunc fn, int n_args, ...);
+
+extern "C" void s3eEdkThreadRunOnOSAsyncV(s3eEdkThreadVoidFunc fn, int n_args, va_list args);
+# 698 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/edk/h/s3eEdk.h"
+extern "C" void s3eEdkThreadSetSuspended();
+# 709 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/edk/h/s3eEdk.h"
+extern "C" void s3eEdkThreadSetResumed();
+# 718 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/edk/h/s3eEdk.h"
+extern "C" s3eResult s3eEdkThreadSleep(uint32 ms);
+# 748 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/edk/h/s3eEdk.h"
+extern "C" void* s3eEdkGlobalsGet(uint32 extID);
+
+
+typedef s3eResult (*s3eEdkInitFn)();
+
+
+typedef void (*s3eEdkTermFn)();
+
+
+
+
+extern "C" void s3eEdkRegister(const char* name,
+                    void* funcs,
+                    int size,
+                    int* funcAttrs,
+                    s3eEdkInitFn init,
+                    s3eEdkTermFn term,
+                    int globalDataSize);
+# 782 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/edk/h/s3eEdk.h"
+typedef enum s3eEdkErrorPriority
+{
+
+
+
+
+    S3E_EXT_ERROR_PRI_MINOR = 0,
+
+
+
+
+
+    S3E_EXT_ERROR_PRI_NORMAL = 1,
+
+
+
+
+
+    S3E_EXT_ERROR_PRI_MAJOR = 2,
+    S3E_EXT_ERROR_PRI_MAX = 3
+} s3eEdkErrorPriority;
+# 816 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/edk/h/s3eEdk.h"
+extern "C" const char* s3eEdkErrorGetString(uint32 extID);
+# 831 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/edk/h/s3eEdk.h"
+extern "C" int s3eEdkErrorGet(uint32 extID);
+# 847 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/edk/h/s3eEdk.h"
+extern "C" s3eResult s3eEdkErrorSet(uint32 extID, int32 error, s3eEdkErrorPriority priority);
+# 856 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/edk/h/s3eEdk.h"
+void s3eEdkErrorSetString(const char* fmt, ...);
+
+extern "C" void s3eEdkErrorSetStringV(const char* fmt, va_list args);
+# 878 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/edk/h/s3eEdk.h"
+extern "C" int s3eEdkGetAppVersionMajor();
+
+
+
+
+
+extern "C" int s3eEdkGetAppVersionMinor();
+# 903 "c:/dev/ahorvath_barium/depot/sdk/main/s3e/edk/h/s3eEdk.h"
+}
+# 16 "C:\\Users\\ahorvath\\Documents\\GitHub\\s3eGooglePlayGames\\source\\generic\\s3eGooglePlayGames_register.cpp" 2
+# 1 "../h/s3eGooglePlayGames.h" 1
+# 42 "../h/s3eGooglePlayGames.h"
+enum s3eGPGCallbackType
+{
+
+
+
+ S3EGPG_INITIALIZATION,
+ S3EGPG_MAX_ID
+};
+
+
+
+
+
+
+enum s3eGPGInitializationResultEnum
+{
+
+
+
+ INITIALIZING,
+
+
+
+ SERVICE_CONNECTED,
+
+
+
+ SERVICE_FAILED,
+
+
+
+ SERVICE_YARRRR
+};
+# 83 "../h/s3eGooglePlayGames.h"
+struct s3eGPGInitializationResult
+{
+ s3eGPGInitializationResultEnum status;
+ const char* errorMsg;
+};
+
+extern "C" {
+
+
+
+
+
+s3eBool s3eGooglePlayGamesAvailable();
+# 106 "../h/s3eGooglePlayGames.h"
+s3eResult s3eGPGInitialize();
+
+
+
+
+
+void s3eGPGDeInitialize();
+# 123 "../h/s3eGooglePlayGames.h"
+void s3eGPGRegisterCallback(s3eGPGCallbackType callbackID,s3eCallback callbackFn,void* userData);
+
+
+
+
+
+
+
+void s3eGPGUnRegisterCallback(s3eGPGCallbackType callbackID,s3eCallback callbackFn);
+# 141 "../h/s3eGooglePlayGames.h"
+void s3eGPGUnlockAchievement(const char* id);
+# 150 "../h/s3eGooglePlayGames.h"
+void s3eGPGUnlockIncrementalAchievement(const char* id,int increment);
+
+
+
+
+void s3eGPGShowAchievementsUI();
+# 171 "../h/s3eGooglePlayGames.h"
+void s3eGPGSubmitLeaderboardScore(const char* leaderboardID, int score);
+
+
+
+
+
+
+void s3eGPGShowLeaderboardUI(const char* leaderboardID);
+
+
+
+
+bool s3eGPGIsSignedIn();
+
+void s3eGPGShowAllLeaderBoardsUI();
+
+}
+# 17 "C:\\Users\\ahorvath\\Documents\\GitHub\\s3eGooglePlayGames\\source\\generic\\s3eGooglePlayGames_register.cpp" 2
+
+extern s3eResult s3eGooglePlayGamesInit();
+extern void s3eGooglePlayGamesTerminate();
+
+
+
+
+
+
+
+static s3eResult s3eGPGInitialize_wrap()
+{
+    do { if (IwDebugTraceIsChannelOn("GOOGLEPLAYGAMES_VERBOSE", 1)) { IwDebugTraceSetTraceChannel("GOOGLEPLAYGAMES_VERBOSE"); IwDebugTraceLinePrintf ("calling s3eGooglePlayGames func on main thread: s3eGPGInitialize"); } } while(0);
+    return (s3eResult)(intptr_t)s3eEdkThreadRunOnOS((s3eEdkThreadFunc)s3eGPGInitialize, 0);
+}
+
+static void s3eGPGDeInitialize_wrap()
+{
+    do { if (IwDebugTraceIsChannelOn("GOOGLEPLAYGAMES_VERBOSE", 1)) { IwDebugTraceSetTraceChannel("GOOGLEPLAYGAMES_VERBOSE"); IwDebugTraceLinePrintf ("calling s3eGooglePlayGames func on main thread: s3eGPGDeInitialize"); } } while(0);
+    s3eEdkThreadRunOnOS((s3eEdkThreadFunc)s3eGPGDeInitialize, 0);
+}
+
+static void s3eGPGRegisterCallback_wrap(s3eGPGCallbackType callbackID, s3eCallback callbackFn, void* userData)
+{
+    do { if (IwDebugTraceIsChannelOn("GOOGLEPLAYGAMES_VERBOSE", 1)) { IwDebugTraceSetTraceChannel("GOOGLEPLAYGAMES_VERBOSE"); IwDebugTraceLinePrintf ("calling s3eGooglePlayGames func on main thread: s3eGPGRegisterCallback"); } } while(0);
+    s3eEdkThreadRunOnOS((s3eEdkThreadFunc)s3eGPGRegisterCallback, 3, callbackID, callbackFn, userData);
+}
+
+static void s3eGPGUnRegisterCallback_wrap(s3eGPGCallbackType callbackID, s3eCallback callbackFn)
+{
+    do { if (IwDebugTraceIsChannelOn("GOOGLEPLAYGAMES_VERBOSE", 1)) { IwDebugTraceSetTraceChannel("GOOGLEPLAYGAMES_VERBOSE"); IwDebugTraceLinePrintf ("calling s3eGooglePlayGames func on main thread: s3eGPGUnRegisterCallback"); } } while(0);
+    s3eEdkThreadRunOnOS((s3eEdkThreadFunc)s3eGPGUnRegisterCallback, 2, callbackID, callbackFn);
+}
+
+static void s3eGPGUnlockAchievement_wrap(const char* id)
+{
+    do { if (IwDebugTraceIsChannelOn("GOOGLEPLAYGAMES_VERBOSE", 1)) { IwDebugTraceSetTraceChannel("GOOGLEPLAYGAMES_VERBOSE"); IwDebugTraceLinePrintf ("calling s3eGooglePlayGames func on main thread: s3eGPGUnlockAchievement"); } } while(0);
+    s3eEdkThreadRunOnOS((s3eEdkThreadFunc)s3eGPGUnlockAchievement, 1, id);
+}
+
+static void s3eGPGUnlockIncrementalAchievement_wrap(const char* id, int increment)
+{
+    do { if (IwDebugTraceIsChannelOn("GOOGLEPLAYGAMES_VERBOSE", 1)) { IwDebugTraceSetTraceChannel("GOOGLEPLAYGAMES_VERBOSE"); IwDebugTraceLinePrintf ("calling s3eGooglePlayGames func on main thread: s3eGPGUnlockIncrementalAchievement"); } } while(0);
+    s3eEdkThreadRunOnOS((s3eEdkThreadFunc)s3eGPGUnlockIncrementalAchievement, 2, id, increment);
+}
+
+static void s3eGPGShowAchievementsUI_wrap()
+{
+    do { if (IwDebugTraceIsChannelOn("GOOGLEPLAYGAMES_VERBOSE", 1)) { IwDebugTraceSetTraceChannel("GOOGLEPLAYGAMES_VERBOSE"); IwDebugTraceLinePrintf ("calling s3eGooglePlayGames func on main thread: s3eGPGShowAchievementsUI"); } } while(0);
+    s3eEdkThreadRunOnOS((s3eEdkThreadFunc)s3eGPGShowAchievementsUI, 0);
+}
+
+static void s3eGPGSubmitLeaderboardScore_wrap(const char* leaderboardID, int score)
+{
+    do { if (IwDebugTraceIsChannelOn("GOOGLEPLAYGAMES_VERBOSE", 1)) { IwDebugTraceSetTraceChannel("GOOGLEPLAYGAMES_VERBOSE"); IwDebugTraceLinePrintf ("calling s3eGooglePlayGames func on main thread: s3eGPGSubmitLeaderboardScore"); } } while(0);
+    s3eEdkThreadRunOnOS((s3eEdkThreadFunc)s3eGPGSubmitLeaderboardScore, 2, leaderboardID, score);
+}
+
+static void s3eGPGShowLeaderboardUI_wrap(const char* leaderboardID)
+{
+    do { if (IwDebugTraceIsChannelOn("GOOGLEPLAYGAMES_VERBOSE", 1)) { IwDebugTraceSetTraceChannel("GOOGLEPLAYGAMES_VERBOSE"); IwDebugTraceLinePrintf ("calling s3eGooglePlayGames func on main thread: s3eGPGShowLeaderboardUI"); } } while(0);
+    s3eEdkThreadRunOnOS((s3eEdkThreadFunc)s3eGPGShowLeaderboardUI, 1, leaderboardID);
+}
+
+static void s3eGPGShowAllLeaderBoardsUI_wrap()
+{
+    do { if (IwDebugTraceIsChannelOn("GOOGLEPLAYGAMES_VERBOSE", 1)) { IwDebugTraceSetTraceChannel("GOOGLEPLAYGAMES_VERBOSE"); IwDebugTraceLinePrintf ("calling s3eGooglePlayGames func on main thread: s3eGPGShowAllLeaderBoardsUI"); } } while(0);
+    s3eEdkThreadRunOnOS((s3eEdkThreadFunc)s3eGPGShowAllLeaderBoardsUI, 0);
+}
+# 100 "C:\\Users\\ahorvath\\Documents\\GitHub\\s3eGooglePlayGames\\source\\generic\\s3eGooglePlayGames_register.cpp"
+void s3eGooglePlayGamesRegisterExt()
+{
+
+    void* funcPtrs[11];
+    funcPtrs[0] = (void*)s3eGPGInitialize_wrap;
+    funcPtrs[1] = (void*)s3eGPGDeInitialize_wrap;
+    funcPtrs[2] = (void*)s3eGPGRegisterCallback_wrap;
+    funcPtrs[3] = (void*)s3eGPGUnRegisterCallback_wrap;
+    funcPtrs[4] = (void*)s3eGPGUnlockAchievement_wrap;
+    funcPtrs[5] = (void*)s3eGPGUnlockIncrementalAchievement_wrap;
+    funcPtrs[6] = (void*)s3eGPGShowAchievementsUI_wrap;
+    funcPtrs[7] = (void*)s3eGPGSubmitLeaderboardScore_wrap;
+    funcPtrs[8] = (void*)s3eGPGShowLeaderboardUI_wrap;
+    funcPtrs[9] = (void*)s3eGPGIsSignedIn;
+    funcPtrs[10] = (void*)s3eGPGShowAllLeaderBoardsUI_wrap;
+
+
+
+
+    int flags[11] = { 0 };
+
+
+
+
+    s3eEdkRegister("s3eGooglePlayGames", funcPtrs, sizeof(funcPtrs), flags, s3eGooglePlayGamesInit, s3eGooglePlayGamesTerminate, 0);
+}
+# 143 "C:\\Users\\ahorvath\\Documents\\GitHub\\s3eGooglePlayGames\\source\\generic\\s3eGooglePlayGames_register.cpp"
+extern "C" __attribute__ ((visibility("default"))) void RegisterExt()
+{
+    s3eGooglePlayGamesRegisterExt();
+}

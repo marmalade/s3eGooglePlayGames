@@ -1,6 +1,6 @@
 Archive member included because of file (symbol)
 
-C:\marmalade\6.3.2\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+C:\dev\ahorvath_barium\depot\sdk\main\s3e\edk\lib\android\libedk.a(edk_helpers.o)
                               release\s3eGooglePlayGames_platform.os (s3eEdkThreadRunOnOS)
 C:\android-ndk-r8b\sources\cxx-stl\gnu-libstdc++\4.4.3\libs\armeabi\libgnustl_static.a(del_op.o)
                               release\s3eGooglePlayGames_platform.os (operator delete(void*))
@@ -101,15 +101,15 @@ Discarded input sections
                 0x00000000        0x0 release\s3eGooglePlayGames_register.os
  .note.GNU-stack
                 0x00000000        0x0 release\s3eGooglePlayGames_register.os
- .text          0x00000000        0x0 C:\marmalade\6.3.2\s3e\edk\lib\android\libedk.a(edk_helpers.o)
- .data          0x00000000        0x0 C:\marmalade\6.3.2\s3e\edk\lib\android\libedk.a(edk_helpers.o)
- .bss           0x00000000        0x0 C:\marmalade\6.3.2\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+ .text          0x00000000        0x0 C:\dev\ahorvath_barium\depot\sdk\main\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+ .data          0x00000000        0x0 C:\dev\ahorvath_barium\depot\sdk\main\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+ .bss           0x00000000        0x0 C:\dev\ahorvath_barium\depot\sdk\main\s3e\edk\lib\android\libedk.a(edk_helpers.o)
  .text.s3eEdkThreadRunOnOSAsync
-                0x00000000        0x0 C:\marmalade\6.3.2\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+                0x00000000        0x0 C:\dev\ahorvath_barium\depot\sdk\main\s3e\edk\lib\android\libedk.a(edk_helpers.o)
  .text.s3eEdkErrorSetString
-                0x00000000        0x0 C:\marmalade\6.3.2\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+                0x00000000        0x0 C:\dev\ahorvath_barium\depot\sdk\main\s3e\edk\lib\android\libedk.a(edk_helpers.o)
  .note.GNU-stack
-                0x00000000        0x0 C:\marmalade\6.3.2\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+                0x00000000        0x0 C:\dev\ahorvath_barium\depot\sdk\main\s3e\edk\lib\android\libedk.a(edk_helpers.o)
  .text          0x00000000        0x0 C:\android-ndk-r8b\sources\cxx-stl\gnu-libstdc++\4.4.3\libs\armeabi\libgnustl_static.a(del_op.o)
  .data          0x00000000        0x0 C:\android-ndk-r8b\sources\cxx-stl\gnu-libstdc++\4.4.3\libs\armeabi\libgnustl_static.a(del_op.o)
  .bss           0x00000000        0x0 C:\android-ndk-r8b\sources\cxx-stl\gnu-libstdc++\4.4.3\libs\armeabi\libgnustl_static.a(del_op.o)
@@ -608,8 +608,8 @@ LOAD C:/android-ndk-r8b/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
 LOAD release\s3eGooglePlayGames_platform.os
 LOAD release\s3eGooglePlayGames.os
 LOAD release\s3eGooglePlayGames_register.os
-LOAD C:\marmalade\6.3.2\s3e\edk\lib\android\libedk.a
-LOAD C:\marmalade\6.3.2\s3e\edk\lib\android/libplaceholderplaceholderplaceholderplaceholderplaceholder.so
+LOAD C:\dev\ahorvath_barium\depot\sdk\main\s3e\edk\lib\android\libedk.a
+LOAD C:\dev\ahorvath_barium\depot\sdk\main\s3e\edk\lib\android/libplaceholderplaceholderplaceholderplaceholderplaceholder.so
 LOAD C:\android-ndk-r8b\platforms\android-9\arch-arm\usr\lib/liblog.so
 LOAD C:\android-ndk-r8b\sources\cxx-stl\gnu-libstdc++\4.4.3\libs\armeabi\libgnustl_static.a
 LOAD c:/android-ndk-r8b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a
@@ -1013,7 +1013,7 @@ LOAD C:/android-ndk-r8b/platforms/android-9/arch-arm/usr/lib/crtend_so.o
                 0x0000560c      0x150 release\s3eGooglePlayGames_register.os
                 0x0000560c                RegisterExt
  .text.s3eEdkThreadRunOnOS
-                0x0000575c       0x30 C:\marmalade\6.3.2\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+                0x0000575c       0x30 C:\dev\ahorvath_barium\depot\sdk\main\s3e\edk\lib\android\libedk.a(edk_helpers.o)
                 0x0000575c                s3eEdkThreadRunOnOS
  .text._ZdlPv   0x0000578c        0xc C:\android-ndk-r8b\sources\cxx-stl\gnu-libstdc++\4.4.3\libs\armeabi\libgnustl_static.a(del_op.o)
                 0x0000578c                operator delete(void*)
@@ -2348,7 +2348,7 @@ LOAD C:/android-ndk-r8b/platforms/android-9/arch-arm/usr/lib/crtend_so.o
  .comment       0x00000000       0x12 release\s3eGooglePlayGames_platform.os
  .comment       0x00000012       0x12 release\s3eGooglePlayGames.os
  .comment       0x00000024       0x12 release\s3eGooglePlayGames_register.os
- .comment       0x00000036       0x12 C:\marmalade\6.3.2\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+ .comment       0x00000036       0x12 C:\dev\ahorvath_barium\depot\sdk\main\s3e\edk\lib\android\libedk.a(edk_helpers.o)
  .comment       0x00000048       0x12 C:\android-ndk-r8b\sources\cxx-stl\gnu-libstdc++\4.4.3\libs\armeabi\libgnustl_static.a(del_op.o)
  .comment       0x0000005a       0x12 C:\android-ndk-r8b\sources\cxx-stl\gnu-libstdc++\4.4.3\libs\armeabi\libgnustl_static.a(del_opv.o)
  .comment       0x0000006c       0x12 C:\android-ndk-r8b\sources\cxx-stl\gnu-libstdc++\4.4.3\libs\armeabi\libgnustl_static.a(new_op.o)
@@ -2478,7 +2478,7 @@ LOAD C:/android-ndk-r8b/platforms/android-9/arch-arm/usr/lib/crtend_so.o
 /DISCARD/
  *(.note.GNU-stack)
  *(.gnu_debuglink)
-OUTPUT(C:\Users\ahorvath\Desktop\s3eGooglePlayGames\lib\android\libs3eGooglePlayGames.so elf32-littlearm)
+OUTPUT(C:\Users\ahorvath\Documents\GitHub\s3eGooglePlayGames\lib\android\libs3eGooglePlayGames.so elf32-littlearm)
 
 .ARM.attributes
                 0x00000000       0x31
@@ -2491,7 +2491,7 @@ OUTPUT(C:\Users\ahorvath\Desktop\s3eGooglePlayGames\lib\android\libs3eGooglePlay
  .ARM.attributes
                 0x00000083       0x2b release\s3eGooglePlayGames_register.os
  .ARM.attributes
-                0x000000ae       0x2b C:\marmalade\6.3.2\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+                0x000000ae       0x2b C:\dev\ahorvath_barium\depot\sdk\main\s3e\edk\lib\android\libedk.a(edk_helpers.o)
  .ARM.attributes
                 0x000000d9       0x29 C:\android-ndk-r8b\sources\cxx-stl\gnu-libstdc++\4.4.3\libs\armeabi\libgnustl_static.a(del_op.o)
  .ARM.attributes

@@ -1,8 +1,8 @@
 Archive member included because of file (symbol)
 
-C:\marmalade\6.3.2\s3e\edk\lib\android\libedk.a(IwDebug.o)
+C:\dev\ahorvath_barium\depot\sdk\main\s3e\edk\lib\android\libedk.a(IwDebug.o)
                               debug\s3eGooglePlayGames_platform.os (IwDebugTraceSetTraceChannel)
-C:\marmalade\6.3.2\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+C:\dev\ahorvath_barium\depot\sdk\main\s3e\edk\lib\android\libedk.a(edk_helpers.o)
                               debug\s3eGooglePlayGames_platform.os (s3eEdkThreadRunOnOS)
 C:\android-ndk-r8b\sources\cxx-stl\gnu-libstdc++\4.4.3\libs\armeabi\libgnustl_static.a(del_op.o)
                               debug\s3eGooglePlayGames_platform.os (operator delete(void*))
@@ -65,7 +65,7 @@ C:\android-ndk-r8b\sources\cxx-stl\gnu-libstdc++\4.4.3\libs\armeabi\libgnustl_st
 C:\android-ndk-r8b\sources\cxx-stl\gnu-libstdc++\4.4.3\libs\armeabi\libgnustl_static.a(eh_type.o)
                               C:\android-ndk-r8b\sources\cxx-stl\gnu-libstdc++\4.4.3\libs\armeabi\libgnustl_static.a(vterminate.o) (__cxa_current_exception_type)
 c:/android-ndk-r8b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(_aeabi_ldivmod.o)
-                              C:\marmalade\6.3.2\s3e\edk\lib\android\libedk.a(IwDebug.o) (__aeabi_ldivmod)
+                              C:\dev\ahorvath_barium\depot\sdk\main\s3e\edk\lib\android\libedk.a(IwDebug.o) (__aeabi_ldivmod)
 c:/android-ndk-r8b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(bpabi.o)
                               c:/android-ndk-r8b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(_aeabi_ldivmod.o) (__gnu_ldivmod_helper)
 c:/android-ndk-r8b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(unwind-arm.o)
@@ -139,45 +139,45 @@ Discarded input sections
  .bss           0x00000000        0x0 debug\s3eGooglePlayGames_register.os
  .note.GNU-stack
                 0x00000000        0x0 debug\s3eGooglePlayGames_register.os
- .text          0x00000000        0x0 C:\marmalade\6.3.2\s3e\edk\lib\android\libedk.a(IwDebug.o)
- .data          0x00000000        0x0 C:\marmalade\6.3.2\s3e\edk\lib\android\libedk.a(IwDebug.o)
+ .text          0x00000000        0x0 C:\dev\ahorvath_barium\depot\sdk\main\s3e\edk\lib\android\libedk.a(IwDebug.o)
+ .data          0x00000000        0x0 C:\dev\ahorvath_barium\depot\sdk\main\s3e\edk\lib\android\libedk.a(IwDebug.o)
  .text.IwAssertRegisterTextCallback
-                0x00000000        0x0 C:\marmalade\6.3.2\s3e\edk\lib\android\libedk.a(IwDebug.o)
+                0x00000000        0x0 C:\dev\ahorvath_barium\depot\sdk\main\s3e\edk\lib\android\libedk.a(IwDebug.o)
  .text.IwAssertRegisterCallback
-                0x00000000        0x0 C:\marmalade\6.3.2\s3e\edk\lib\android\libedk.a(IwDebug.o)
+                0x00000000        0x0 C:\dev\ahorvath_barium\depot\sdk\main\s3e\edk\lib\android\libedk.a(IwDebug.o)
  .text.IwDebugErrorRegisterCallback
-                0x00000000        0x0 C:\marmalade\6.3.2\s3e\edk\lib\android\libedk.a(IwDebug.o)
+                0x00000000        0x0 C:\dev\ahorvath_barium\depot\sdk\main\s3e\edk\lib\android\libedk.a(IwDebug.o)
  .text.IwDebugAssertSetUID
-                0x00000000        0x0 C:\marmalade\6.3.2\s3e\edk\lib\android\libedk.a(IwDebug.o)
+                0x00000000        0x0 C:\dev\ahorvath_barium\depot\sdk\main\s3e\edk\lib\android\libedk.a(IwDebug.o)
  .text.IwDebugClearConfigCache
-                0x00000000        0x0 C:\marmalade\6.3.2\s3e\edk\lib\android\libedk.a(IwDebug.o)
+                0x00000000        0x0 C:\dev\ahorvath_barium\depot\sdk\main\s3e\edk\lib\android\libedk.a(IwDebug.o)
  .text.IwDebugErrorShow
-                0x00000000        0x0 C:\marmalade\6.3.2\s3e\edk\lib\android\libedk.a(IwDebug.o)
+                0x00000000        0x0 C:\dev\ahorvath_barium\depot\sdk\main\s3e\edk\lib\android\libedk.a(IwDebug.o)
  .text.IwDebugTraceLineVPrintf
-                0x00000000        0x0 C:\marmalade\6.3.2\s3e\edk\lib\android\libedk.a(IwDebug.o)
+                0x00000000        0x0 C:\dev\ahorvath_barium\depot\sdk\main\s3e\edk\lib\android\libedk.a(IwDebug.o)
  .text.IwDebugAssertIsChannelOn
-                0x00000000        0x0 C:\marmalade\6.3.2\s3e\edk\lib\android\libedk.a(IwDebug.o)
+                0x00000000        0x0 C:\dev\ahorvath_barium\depot\sdk\main\s3e\edk\lib\android\libedk.a(IwDebug.o)
  .text.IwDebugTraceDisable
-                0x00000000        0x0 C:\marmalade\6.3.2\s3e\edk\lib\android\libedk.a(IwDebug.o)
+                0x00000000        0x0 C:\dev\ahorvath_barium\depot\sdk\main\s3e\edk\lib\android\libedk.a(IwDebug.o)
  .text.IwDebugAssertSetMessage
-                0x00000000        0x0 C:\marmalade\6.3.2\s3e\edk\lib\android\libedk.a(IwDebug.o)
+                0x00000000        0x0 C:\dev\ahorvath_barium\depot\sdk\main\s3e\edk\lib\android\libedk.a(IwDebug.o)
  .text.IwDebugAssertSetSolution
-                0x00000000        0x0 C:\marmalade\6.3.2\s3e\edk\lib\android\libedk.a(IwDebug.o)
+                0x00000000        0x0 C:\dev\ahorvath_barium\depot\sdk\main\s3e\edk\lib\android\libedk.a(IwDebug.o)
  .text.IwDebugAssertShow
-                0x00000000        0x0 C:\marmalade\6.3.2\s3e\edk\lib\android\libedk.a(IwDebug.o)
+                0x00000000        0x0 C:\dev\ahorvath_barium\depot\sdk\main\s3e\edk\lib\android\libedk.a(IwDebug.o)
  .text.IwDebugTraceChannelSwitch
-                0x00000000        0x0 C:\marmalade\6.3.2\s3e\edk\lib\android\libedk.a(IwDebug.o)
+                0x00000000        0x0 C:\dev\ahorvath_barium\depot\sdk\main\s3e\edk\lib\android\libedk.a(IwDebug.o)
  .note.GNU-stack
-                0x00000000        0x0 C:\marmalade\6.3.2\s3e\edk\lib\android\libedk.a(IwDebug.o)
- .text          0x00000000        0x0 C:\marmalade\6.3.2\s3e\edk\lib\android\libedk.a(edk_helpers.o)
- .data          0x00000000        0x0 C:\marmalade\6.3.2\s3e\edk\lib\android\libedk.a(edk_helpers.o)
- .bss           0x00000000        0x0 C:\marmalade\6.3.2\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+                0x00000000        0x0 C:\dev\ahorvath_barium\depot\sdk\main\s3e\edk\lib\android\libedk.a(IwDebug.o)
+ .text          0x00000000        0x0 C:\dev\ahorvath_barium\depot\sdk\main\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+ .data          0x00000000        0x0 C:\dev\ahorvath_barium\depot\sdk\main\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+ .bss           0x00000000        0x0 C:\dev\ahorvath_barium\depot\sdk\main\s3e\edk\lib\android\libedk.a(edk_helpers.o)
  .text.s3eEdkThreadRunOnOSAsync
-                0x00000000        0x0 C:\marmalade\6.3.2\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+                0x00000000        0x0 C:\dev\ahorvath_barium\depot\sdk\main\s3e\edk\lib\android\libedk.a(edk_helpers.o)
  .text.s3eEdkErrorSetString
-                0x00000000        0x0 C:\marmalade\6.3.2\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+                0x00000000        0x0 C:\dev\ahorvath_barium\depot\sdk\main\s3e\edk\lib\android\libedk.a(edk_helpers.o)
  .note.GNU-stack
-                0x00000000        0x0 C:\marmalade\6.3.2\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+                0x00000000        0x0 C:\dev\ahorvath_barium\depot\sdk\main\s3e\edk\lib\android\libedk.a(edk_helpers.o)
  .text          0x00000000        0x0 C:\android-ndk-r8b\sources\cxx-stl\gnu-libstdc++\4.4.3\libs\armeabi\libgnustl_static.a(del_op.o)
  .data          0x00000000        0x0 C:\android-ndk-r8b\sources\cxx-stl\gnu-libstdc++\4.4.3\libs\armeabi\libgnustl_static.a(del_op.o)
  .bss           0x00000000        0x0 C:\android-ndk-r8b\sources\cxx-stl\gnu-libstdc++\4.4.3\libs\armeabi\libgnustl_static.a(del_op.o)
@@ -703,8 +703,8 @@ LOAD C:/android-ndk-r8b/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
 LOAD debug\s3eGooglePlayGames_platform.os
 LOAD debug\s3eGooglePlayGames.os
 LOAD debug\s3eGooglePlayGames_register.os
-LOAD C:\marmalade\6.3.2\s3e\edk\lib\android\libedk.a
-LOAD C:\marmalade\6.3.2\s3e\edk\lib\android/libplaceholderplaceholderplaceholderplaceholderplaceholder.so
+LOAD C:\dev\ahorvath_barium\depot\sdk\main\s3e\edk\lib\android\libedk.a
+LOAD C:\dev\ahorvath_barium\depot\sdk\main\s3e\edk\lib\android/libplaceholderplaceholderplaceholderplaceholderplaceholder.so
 LOAD C:\android-ndk-r8b\platforms\android-9\arch-arm\usr\lib/liblog.so
 LOAD C:\android-ndk-r8b\sources\cxx-stl\gnu-libstdc++\4.4.3\libs\armeabi\libgnustl_static.a
 LOAD c:/android-ndk-r8b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a
@@ -1156,18 +1156,18 @@ LOAD C:/android-ndk-r8b/platforms/android-9/arch-arm/usr/lib/crtend_so.o
                 0x00006900        0xc debug\s3eGooglePlayGames_register.os
                 0x00006900                RegisterExt
  .text.IwDebugTraceSetTraceChannel
-                0x0000690c       0x1c C:\marmalade\6.3.2\s3e\edk\lib\android\libedk.a(IwDebug.o)
+                0x0000690c       0x1c C:\dev\ahorvath_barium\depot\sdk\main\s3e\edk\lib\android\libedk.a(IwDebug.o)
                 0x0000690c                IwDebugTraceSetTraceChannel
- .text._GLOBAL__I_Z__sdk_modules_iwcore_source_IwDebug.cpp
-                0x00006928       0xa4 C:\marmalade\6.3.2\s3e\edk\lib\android\libedk.a(IwDebug.o)
+ .text._GLOBAL__I_Y__sdk_modules_iwcore_source_IwDebug.cpp
+                0x00006928       0xa4 C:\dev\ahorvath_barium\depot\sdk\main\s3e\edk\lib\android\libedk.a(IwDebug.o)
  .text.IwDebugTraceIsChannelOn
-                0x000069cc      0x2b8 C:\marmalade\6.3.2\s3e\edk\lib\android\libedk.a(IwDebug.o)
+                0x000069cc      0x2b8 C:\dev\ahorvath_barium\depot\sdk\main\s3e\edk\lib\android\libedk.a(IwDebug.o)
                 0x000069cc                IwDebugTraceIsChannelOn
  .text.IwDebugTraceLinePrintf
-                0x00006c84      0x10c C:\marmalade\6.3.2\s3e\edk\lib\android\libedk.a(IwDebug.o)
+                0x00006c84      0x10c C:\dev\ahorvath_barium\depot\sdk\main\s3e\edk\lib\android\libedk.a(IwDebug.o)
                 0x00006c84                IwDebugTraceLinePrintf
  .text.s3eEdkThreadRunOnOS
-                0x00006d90       0x30 C:\marmalade\6.3.2\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+                0x00006d90       0x30 C:\dev\ahorvath_barium\depot\sdk\main\s3e\edk\lib\android\libedk.a(edk_helpers.o)
                 0x00006d90                s3eEdkThreadRunOnOS
  .text._ZdlPv   0x00006dc0        0xc C:\android-ndk-r8b\sources\cxx-stl\gnu-libstdc++\4.4.3\libs\armeabi\libgnustl_static.a(del_op.o)
                 0x00006dc0                operator delete(void*)
@@ -1571,7 +1571,7 @@ LOAD C:/android-ndk-r8b/platforms/android-9/arch-arm/usr/lib/crtend_so.o
  .rodata        0x0001023c      0x304 debug\s3eGooglePlayGames_platform.os
  .rodata        0x00010540      0x314 debug\s3eGooglePlayGames_register.os
  .rodata.str1.4
-                0x00010854      0x118 C:\marmalade\6.3.2\s3e\edk\lib\android\libedk.a(IwDebug.o)
+                0x00010854      0x118 C:\dev\ahorvath_barium\depot\sdk\main\s3e\edk\lib\android\libedk.a(IwDebug.o)
                                 0x120 (size before relaxing)
  .rodata._ZTSN9__gnu_cxx24__concurrence_lock_errorE
                 0x0001096c       0x28 C:\android-ndk-r8b\sources\cxx-stl\gnu-libstdc++\4.4.3\libs\armeabi\libgnustl_static.a(eh_alloc.o)
@@ -2129,7 +2129,7 @@ LOAD C:/android-ndk-r8b/platforms/android-9/arch-arm/usr/lib/crtend_so.o
  *(.init_array)
  .init_array    0x00012198        0x4 C:/android-ndk-r8b/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
                 0x00012198                __INIT_ARRAY__
- .init_array    0x0001219c        0x4 C:\marmalade\6.3.2\s3e\edk\lib\android\libedk.a(IwDebug.o)
+ .init_array    0x0001219c        0x4 C:\dev\ahorvath_barium\depot\sdk\main\s3e\edk\lib\android\libedk.a(IwDebug.o)
  .init_array    0x000121a0        0x4 C:\android-ndk-r8b\sources\cxx-stl\gnu-libstdc++\4.4.3\libs\armeabi\libgnustl_static.a(eh_alloc.o)
  .init_array    0x000121a4        0x4 C:\android-ndk-r8b\sources\cxx-stl\gnu-libstdc++\4.4.3\libs\armeabi\libgnustl_static.a(eh_globals.o)
  .init_array    0x000121a8        0x4 C:/android-ndk-r8b/platforms/android-9/arch-arm/usr/lib/crtend_so.o
@@ -2466,7 +2466,7 @@ LOAD C:/android-ndk-r8b/platforms/android-9/arch-arm/usr/lib/crtend_so.o
  .dynbss        0x00000000        0x0 C:/android-ndk-r8b/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
  *(.bss .bss.* .gnu.linkonce.b.*)
  .bss           0x00013018       0x30 debug\s3eGooglePlayGames_platform.os
- .bss           0x00013048     0x1a28 C:\marmalade\6.3.2\s3e\edk\lib\android\libedk.a(IwDebug.o)
+ .bss           0x00013048     0x1a28 C:\dev\ahorvath_barium\depot\sdk\main\s3e\edk\lib\android\libedk.a(IwDebug.o)
                 0x00013048                g_DebugGlobals
  .bss._ZL15dependents_used
                 0x00014a70        0x4 C:\android-ndk-r8b\sources\cxx-stl\gnu-libstdc++\4.4.3\libs\armeabi\libgnustl_static.a(eh_alloc.o)
@@ -2522,8 +2522,8 @@ LOAD C:/android-ndk-r8b/platforms/android-9/arch-arm/usr/lib/crtend_so.o
  .comment       0x00000000       0x12 debug\s3eGooglePlayGames_platform.os
  .comment       0x00000012       0x12 debug\s3eGooglePlayGames.os
  .comment       0x00000024       0x12 debug\s3eGooglePlayGames_register.os
- .comment       0x00000036       0x12 C:\marmalade\6.3.2\s3e\edk\lib\android\libedk.a(IwDebug.o)
- .comment       0x00000048       0x12 C:\marmalade\6.3.2\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+ .comment       0x00000036       0x12 C:\dev\ahorvath_barium\depot\sdk\main\s3e\edk\lib\android\libedk.a(IwDebug.o)
+ .comment       0x00000048       0x12 C:\dev\ahorvath_barium\depot\sdk\main\s3e\edk\lib\android\libedk.a(edk_helpers.o)
  .comment       0x0000005a       0x12 C:\android-ndk-r8b\sources\cxx-stl\gnu-libstdc++\4.4.3\libs\armeabi\libgnustl_static.a(del_op.o)
  .comment       0x0000006c       0x12 C:\android-ndk-r8b\sources\cxx-stl\gnu-libstdc++\4.4.3\libs\armeabi\libgnustl_static.a(del_opv.o)
  .comment       0x0000007e       0x12 C:\android-ndk-r8b\sources\cxx-stl\gnu-libstdc++\4.4.3\libs\armeabi\libgnustl_static.a(new_op.o)
@@ -2649,20 +2649,20 @@ LOAD C:/android-ndk-r8b/platforms/android-9/arch-arm/usr/lib/crtend_so.o
  .debug_abbrev  0x00000e51       0x14 c:/android-ndk-r8b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(_udivsi3.o)
  .debug_abbrev  0x00000e65       0x14 c:/android-ndk-r8b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(_dvmd_lnx.o)
 
-.debug_line     0x00000000     0x156f
+.debug_line     0x00000000     0x15a6
  *(.debug_line)
- .debug_line    0x00000000      0x4db debug\s3eGooglePlayGames_platform.os
- .debug_line    0x000004db      0x1a3 debug\s3eGooglePlayGames.os
- .debug_line    0x0000067e      0x1e1 debug\s3eGooglePlayGames_register.os
- .debug_line    0x0000085f       0xa5 c:/android-ndk-r8b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(_aeabi_ldivmod.o)
- .debug_line    0x00000904       0xab c:/android-ndk-r8b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(bpabi.o)
- .debug_line    0x000009af      0x4d2 c:/android-ndk-r8b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(unwind-arm.o)
- .debug_line    0x00000e81       0xf1 c:/android-ndk-r8b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(libunwind.o)
- .debug_line    0x00000f72      0x1d2 c:/android-ndk-r8b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(pr-support.o)
- .debug_line    0x00001144      0x162 c:/android-ndk-r8b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(_divdi3.o)
- .debug_line    0x000012a6      0x152 c:/android-ndk-r8b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(_udivdi3.o)
- .debug_line    0x000013f8       0xcc c:/android-ndk-r8b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(_udivsi3.o)
- .debug_line    0x000014c4       0xab c:/android-ndk-r8b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(_dvmd_lnx.o)
+ .debug_line    0x00000000      0x4f2 debug\s3eGooglePlayGames_platform.os
+ .debug_line    0x000004f2      0x1b3 debug\s3eGooglePlayGames.os
+ .debug_line    0x000006a5      0x1f1 debug\s3eGooglePlayGames_register.os
+ .debug_line    0x00000896       0xa5 c:/android-ndk-r8b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(_aeabi_ldivmod.o)
+ .debug_line    0x0000093b       0xab c:/android-ndk-r8b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(bpabi.o)
+ .debug_line    0x000009e6      0x4d2 c:/android-ndk-r8b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(unwind-arm.o)
+ .debug_line    0x00000eb8       0xf1 c:/android-ndk-r8b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(libunwind.o)
+ .debug_line    0x00000fa9      0x1d2 c:/android-ndk-r8b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(pr-support.o)
+ .debug_line    0x0000117b      0x162 c:/android-ndk-r8b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(_divdi3.o)
+ .debug_line    0x000012dd      0x152 c:/android-ndk-r8b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(_udivdi3.o)
+ .debug_line    0x0000142f       0xcc c:/android-ndk-r8b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(_udivsi3.o)
+ .debug_line    0x000014fb       0xab c:/android-ndk-r8b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(_dvmd_lnx.o)
 
 .debug_frame    0x00000000      0xb7c
  *(.debug_frame)
@@ -2676,23 +2676,23 @@ LOAD C:/android-ndk-r8b/platforms/android-9/arch-arm/usr/lib/crtend_so.o
  .debug_frame   0x00000b0c       0x48 c:/android-ndk-r8b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(_udivdi3.o)
  .debug_frame   0x00000b54       0x28 c:/android-ndk-r8b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(_udivsi3.o)
 
-.debug_str      0x00000000     0x5c17
+.debug_str      0x00000000     0x5c3c
  *(.debug_str)
- .debug_str     0x00000000     0x4e0f debug\s3eGooglePlayGames_platform.os
-                               0x4f96 (size before relaxing)
- .debug_str     0x00004e0f       0xc3 debug\s3eGooglePlayGames.os
-                                0x380 (size before relaxing)
- .debug_str     0x00004ed2      0x1d1 debug\s3eGooglePlayGames_register.os
-                                0x391 (size before relaxing)
- .debug_str     0x000050a3       0xb9 c:/android-ndk-r8b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(bpabi.o)
+ .debug_str     0x00000000     0x4e22 debug\s3eGooglePlayGames_platform.os
+                               0x4fa9 (size before relaxing)
+ .debug_str     0x00004e22       0xcc debug\s3eGooglePlayGames.os
+                                0x393 (size before relaxing)
+ .debug_str     0x00004eee      0x1da debug\s3eGooglePlayGames_register.os
+                                0x3a4 (size before relaxing)
+ .debug_str     0x000050c8       0xb9 c:/android-ndk-r8b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(bpabi.o)
                                  0xde (size before relaxing)
- .debug_str     0x0000515c      0x80f c:/android-ndk-r8b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(unwind-arm.o)
+ .debug_str     0x00005181      0x80f c:/android-ndk-r8b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(unwind-arm.o)
                                 0x8f4 (size before relaxing)
- .debug_str     0x0000596b      0x13d c:/android-ndk-r8b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(pr-support.o)
+ .debug_str     0x00005990      0x13d c:/android-ndk-r8b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(pr-support.o)
                                 0x45a (size before relaxing)
- .debug_str     0x00005aa8      0x165 c:/android-ndk-r8b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(_divdi3.o)
+ .debug_str     0x00005acd      0x165 c:/android-ndk-r8b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(_divdi3.o)
                                 0x215 (size before relaxing)
- .debug_str     0x00005c0d        0xa c:/android-ndk-r8b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(_udivdi3.o)
+ .debug_str     0x00005c32        0xa c:/android-ndk-r8b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(_udivdi3.o)
                                 0x216 (size before relaxing)
 
 .debug_loc      0x00000000     0x2b56
@@ -2743,7 +2743,7 @@ LOAD C:/android-ndk-r8b/platforms/android-9/arch-arm/usr/lib/crtend_so.o
 /DISCARD/
  *(.note.GNU-stack)
  *(.gnu_debuglink)
-OUTPUT(C:\Users\ahorvath\Desktop\s3eGooglePlayGames\lib\android\libs3eGooglePlayGames_d.so elf32-littlearm)
+OUTPUT(C:\Users\ahorvath\Documents\GitHub\s3eGooglePlayGames\lib\android\libs3eGooglePlayGames_d.so elf32-littlearm)
 
 .ARM.attributes
                 0x00000000       0x31
@@ -2756,9 +2756,9 @@ OUTPUT(C:\Users\ahorvath\Desktop\s3eGooglePlayGames\lib\android\libs3eGooglePlay
  .ARM.attributes
                 0x00000083       0x2b debug\s3eGooglePlayGames_register.os
  .ARM.attributes
-                0x000000ae       0x2b C:\marmalade\6.3.2\s3e\edk\lib\android\libedk.a(IwDebug.o)
+                0x000000ae       0x2b C:\dev\ahorvath_barium\depot\sdk\main\s3e\edk\lib\android\libedk.a(IwDebug.o)
  .ARM.attributes
-                0x000000d9       0x2b C:\marmalade\6.3.2\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+                0x000000d9       0x2b C:\dev\ahorvath_barium\depot\sdk\main\s3e\edk\lib\android\libedk.a(edk_helpers.o)
  .ARM.attributes
                 0x00000104       0x29 C:\android-ndk-r8b\sources\cxx-stl\gnu-libstdc++\4.4.3\libs\armeabi\libgnustl_static.a(del_op.o)
  .ARM.attributes

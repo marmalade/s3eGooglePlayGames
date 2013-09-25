@@ -1,0 +1,603 @@
+# coding=utf-8
+# Auto-generated scons script for building 's3eGooglePlayGames_android'
+# for the '('LINUX', 'SCONS', 'ARM')' target
+#
+# ***WARNING***: if you edit this file your changes will be lost next time your
+# ***WARNING***: run the mkb.
+
+import os
+import sys
+import socket
+import SCons
+from os.path import join
+
+SetOption("implicit_cache" ,1)
+
+target_name = 'c:/Users/ahorvath/Documents/GitHub/s3eGooglePlayGames/lib/android/libs3eGooglePlayGames.so'
+target_name_debug = 'c:/Users/ahorvath/Documents/GitHub/s3eGooglePlayGames/lib/android/libs3eGooglePlayGames_d.so'
+target_name_rvct = 'c:/Users/ahorvath/Documents/GitHub/s3eGooglePlayGames/lib/android/libs3eGooglePlayGames.so'
+target_name_debug_rvct = 'c:/Users/ahorvath/Documents/GitHub/s3eGooglePlayGames/lib/android/libs3eGooglePlayGames_d.so'
+sdk_root = 'c:/dev/ahorvath_barium/depot/sdk/main'
+
+scons_version = SCons.__version__.split(".")[:2]
+scons_version = [int(x) for x in scons_version]
+strip = 1
+
+scons1_2 = scons_version >= [1,2]
+if not scons1_2:
+    BoolVariable = BoolOption
+    Variables = Options
+
+opts = Variables('build.conf')
+opts.Add('CC', 'The C compiler.')
+opts.Add('CXX', 'The C++ compiler.')
+if not scons1_2:
+    opts.AddVariables = opts.AddOptions
+opts.AddVariables(
+    BoolVariable('dist', 'use distcc compiler.', 1),
+    BoolVariable('debug', 'use debug defines.', 0),
+    BoolVariable('verbose', 'show command output', 0),
+    BoolVariable('profile', 'add profiling support to all generated code', 0),
+)
+
+def SplitN(str):
+    return filter(lambda x: x, str.split("\n"))
+
+includes = SplitN(r'''
+../source/h
+../h
+c:/dev/ahorvath_barium/depot/sdk/main/s3e/edk/h
+c:/dev/ahorvath_barium/depot/sdk/main/s3e/h
+c:/dev/ahorvath_barium/depot/sdk/main/s3e/h/ext
+c:/dev/ahorvath_barium/depot/sdk/main/modules/iwutil/h
+c:/dev/ahorvath_barium/depot/sdk/main/modules/iwcore/h
+c:/android-ndk-r8b/sources/cxx-stl/gnu-libstdc++/4.4.3/include
+c:/android-ndk-r8b/sources/cxx-stl/gnu-libstdc++/4.4.3/libs/armeabi/include
+c:/android-ndk-r8b/platforms/android-9/arch-arm/usr/include
+''')
+
+libraries = SplitN(r'''
+edk
+libplaceholderplaceholderplaceholderplaceholderplaceholder
+c
+m
+log
+gnustl_static
+gcc
+''')
+
+libraries_d = SplitN(r'''
+edk
+libplaceholderplaceholderplaceholderplaceholderplaceholder
+c
+m
+log
+gnustl_static
+gcc
+''')
+
+libraries_rvct = SplitN(r'''
+edk
+libplaceholderplaceholderplaceholderplaceholderplaceholder
+c
+m
+log
+gnustl_static
+gcc
+''')
+
+libraries_rvct_d = SplitN(r'''
+edk
+libplaceholderplaceholderplaceholderplaceholderplaceholder
+c
+m
+log
+gnustl_static
+gcc
+''')
+
+extra_objects = SplitN(r'''
+
+''')
+
+libpath = SplitN(r'''
+c:/dev/ahorvath_barium/depot/sdk/main/s3e/edk/lib/android
+c:/android-ndk-r8b/sources/cxx-stl/gnu-libstdc++/4.4.3/libs/armeabi
+C:/android-ndk-r8b/platforms/android-9/arch-arm/usr/lib
+''')
+
+Extensions_sources = SplitN(r'''
+../source/android/s3eGooglePlayGames_platform.cpp
+../source/generic/s3eGooglePlayGames.cpp
+../source/generic/s3eGooglePlayGames_register.cpp
+''')
+
+
+# Map of all libraries that we need to build
+build_libs = {
+}
+
+
+build_libs_debug = {
+}
+
+
+# Map of all sources to build
+modules = {
+    'Extensions' : Extensions_sources,
+
+}
+
+
+source_flags = {
+}
+
+# Environment variables set by the mkb system
+export_map = {
+    'EDK_BUILDER' : 'c:\\dev\\ahorvath_barium\\depot\\sdk\\main/s3e/edk/builder',
+}
+
+exports = Split("""
+S3E_DIR
+MARMALADE_ROOT
+P4PASSWD
+P4CONFIG
+P4USER
+P4CLIENT
+P4TICKETS
+ARMLMD_LICENSE_FILE
+LM_LICENSE_FILE
+CCACHE_LOGFILE
+CCACHE_TEMPDIR
+CCACHE_DIR
+HOME
+BREWTOOLSDIR
+BTILDIR
+TEMP
+TMP
+LIB
+INCLUDE
+DMUCS_SERVER
+DISTCC_HOSTS
+DISTCC_VERBOSE
+CODESIGN_ALLOCATE
+IPHONEOS_DEPLOYMENT_TARGET
+MAXOSX_DEPLOYMENT_TARGET
+SYSTEMROOT
+SYSTEMDRIVE
+""")
+
+for export in exports:
+    if export not in export_map and export in os.environ:
+        export_map[export] = os.environ[export]
+
+arch = "ARM"
+
+gcc_variants = ["gcc", "arm-none-linux-gnueabi-gcc", "arm-linux-gnu-gcc", "arm-none-eabi-gcc", 'mipsel-linux-uclibc-gcc', 'mips-linux-gnu-gcc', 'clang', 'i686-linux-android-gcc']
+
+#
+# Figure out what compiler to use
+#
+compiler = 'arm-linux-androideabi-gcc'
+if 'compiler' in ARGUMENTS:
+    compiler = ARGUMENTS['compiler']
+
+if compiler == 'rvct':
+    target_name = target_name_rvct
+    target_name_debug = target_name_debug_rvct
+    includes += "."
+
+if compiler == 'msvc':
+    tools = ['msvc', 'mslink', 'mslib']
+else:
+    tools = ['gcc', 'g++', 'ar', 'link', 'as']
+
+
+paths = [
+    r'c:\android-ndk-r8b\toolchains\arm-linux-androideabi-4.4.3\prebuilt\windows\bin',
+]
+
+path = []
+
+def add_to_path(p, prepend=0):
+    global path
+    if prepend:
+        path.insert(0, p)
+    else:
+        path.append(p)
+
+if os.name == 'nt':
+    add_to_path("C:\windows\system32")
+
+if os.name == 'posix':
+    add_to_path("/bin")
+    add_to_path("/usr/bin")
+    add_to_path("/usr/sbin")
+
+for p in reversed(paths):
+    add_to_path(p, prepend=1)
+
+os.environ['PATH'] = os.pathsep.join(path)
+
+env=Environment(
+tools=tools,
+options=opts,
+ENV={'PATH':path},
+MSVC_VERSION="6.0",
+CPPPATH=includes,
+LIBPATH=libpath,
+PLFLAGS=[],
+STATIC_AND_SHARED_OBJECTS_ARE_THE_SAME='true',
+_CPPINCFLAGS='$( ${_concat(INCPREFIX, CPPPATH, INCSUFFIX, __env__)} $)',
+)
+
+
+Help(opts.GenerateHelpText(env))
+
+if env['debug']:
+    build_libs = build_libs_debug
+    temp_defines = 'temp_defines_debug.h'
+    builddir = "debug"
+    target_name = target_name_debug
+    libraries = libraries_d
+    libraries_rvct = libraries_rvct_d
+else:
+    temp_defines = 'temp_defines_release.h'
+    builddir = "release"
+
+if compiler == "rvct":
+    libraries = libraries_rvct
+    builddir += "_rvct"
+
+
+if compiler == 'rvct':
+    env.Append(LINKFLAGS=[])
+    if env['debug']:
+        env.Append(CCFLAGS=['-g', '-O0', '--no_inline', '--preinclude=temp_defines_debug.h'])
+        env.Append(LINKFLAGS=[])
+        env.Append(PLFLAGS=[])
+    else:
+        env.Append(CCFLAGS=['-Otime', '-O3', '--preinclude=temp_defines_release.h'])
+        env.Append(LINKFLAGS=[])
+    env.Append(CCFLAGS=['--split_sections', '--diag_remark=1,9,111,128,174,177,196,381,550,611,815,1293,1294,1295,1299,1300,1304,3052', '--no_exceptions', '--fpu=softvfp+vfpv2', '--apcs=/interwork', '--cpu=5TE'])
+    env.Append(CFLAGS=[])
+    env.Append(CXXFLAGS=['--cpp'])
+    env['ARFLAGS'] = ['--create']
+    env['ASFLAGS'] = ['-g', '--apcs=/interwork', '--cpu=5TE']
+    env['ASPPFLAGS'] = []
+    env['STRIPFLAGS'] = []
+    env['CXXCOM'] = '$CXX -o $TARGET -c $CCFLAGS $CXXFLAGS $_CCCOMCOM $SOURCES'
+    env['SHCCFLAGS'] = SCons.Util.CLVar('$CCFLAGS -fPIC')
+
+else:
+    env.Append(LINKFLAGS=['-Wl,-Bsymbolic', '-Wl,--no-undefined', '--sysroot="C:/android-ndk-r8b\\platforms\\android-9/arch-arm"', '-Wl,--gc-sections', '-Wl,--as-needed', '-mthumb-interwork'])
+    if env['debug']:
+        env.Append(CCFLAGS=['-g', '-O0', '-include', 'temp_defines_debug.h'])
+        env.Append(LINKFLAGS=['-Wl,-Map="c:/Users/ahorvath/Documents/GitHub/s3eGooglePlayGames/lib/android/libs3eGooglePlayGames_d.map"'])
+        env.Append(PLFLAGS=[])
+    else:
+        env.Append(CCFLAGS=['-O3', '-include', 'temp_defines_release.h'])
+        env.Append(LINKFLAGS=['-Wl,-Map="c:/Users/ahorvath/Documents/GitHub/s3eGooglePlayGames/lib/android/libs3eGooglePlayGames.map"'])
+    env.Append(CCFLAGS=['-fsigned-char', '-fno-strict-aliasing', '-Wno-psabi', '-fvisibility=hidden', '-fno-short-enums', '-Wall', '-fomit-frame-pointer', '-fmessage-length=0', '-Wno-unused', '-Wno-parentheses', '-save-temps', '-ffunction-sections', '-mstructure-size-boundary=8', '-mfpu=vfp', '-mfloat-abi=softfp', '-mthumb-interwork', '-march=armv5te'])
+    env.Append(CFLAGS=['-std=gnu99'])
+    env.Append(CXXFLAGS=['-fno-exceptions'])
+    env['ARFLAGS'] = ['rc']
+    env['ASFLAGS'] = []
+    env['ASPPFLAGS'] = ['-x', 'assembler-with-cpp']
+    env['STRIPFLAGS'] = []
+    env['CXXCOM'] = '$CXX -o $TARGET -c $CCFLAGS $CXXFLAGS $_CCCOMCOM $SOURCES'
+    env['SHCCFLAGS'] = SCons.Util.CLVar('$CCFLAGS -fPIC')
+
+
+env.Append(ENV=export_map)
+
+if env['dist'] and compiler != "msvc":
+    if 'DISTCC_HOSTS' not in env['ENV']:
+        if env['verbose']:
+            print "not using distcc as DISTCC_HOSTS is not set"
+        env['dist'] = 0
+    elif not env.WhereIs("distcc"):
+        if env['verbose']:
+            print "not using distcc as distcc not found in PATH"
+        env['dist'] = 0
+
+if not env['verbose']:
+    env.Replace(
+    CXXCOMSTR   ='Compiling [$CXX] $SOURCE',
+    ASCOMSTR    ='Assembling [$AS] $SOURCE',
+    ASPPCOMSTR  ='Assembling (with cpp) [$AS] $SOURCE',
+    CCCOMSTR    ='Compiling [$CC] $SOURCE',
+    SHCXXCOMSTR ='Compiling [$CXX] $SOURCE',
+    SHCCCOMSTR  ='Compiling [$CC] $SOURCE',
+    LINKCOMSTR  ='Linking   [$LINK] $TARGET',
+    ARCOMSTR    ='Librarian [$AR] $TARGET',
+    SHLINKCOMSTR='Linking   [$SHLINK] $TARGET')
+
+if env['debug']:
+    strip = 0
+
+if compiler == 'rvct':
+    # Emitter specified tools:
+    env['CC']     = 'armcc'
+    env['CXX']    = 'armcc'
+    env['LINK']   = 'armlink'
+    env['AR']     = 'armar'
+    env['AS']     = 'armasm'
+    env['STRIP']  = ''
+    env['RANLIB'] = ''
+else:
+    # Emitter specified tools:
+    env['CC']     = 'arm-linux-androideabi-gcc'
+    env['CXX']    = 'arm-linux-androideabi-g++'
+    env['LINK']   = 'arm-linux-androideabi-g++'
+    env['AR']     = 'arm-linux-androideabi-ar'
+    env['AS']     = 'arm-linux-androideabi-as'
+    env['STRIP']  = 'arm-linux-androideabi-strip'
+    env['RANLIB'] = 'arm-linux-androideabi-ranlib'
+
+# compiler settings for all ARM targets
+env['FROMELF'] = 'fromelf'
+
+if compiler == 'rvct':
+    env['ENV']['CCACHE_EXTENSION'] = 'c'
+    env['INCPREFIX'] = "-I"
+    env['OBJSUFFIX'] = ".o"
+    env['LIBSUFFIX'] = ".a"
+    env['LIBPREFIX'] = ""
+    env['CPPDEFPREFIX'] = "-D"
+    env['CPPFLAGS'] = ""
+    env['RANLIBCOM'] = ''
+    env['LIBLINKPREFIX'] = ""
+    env['SHCCFLAGS'] = "$CCFLAGS"
+    env['SHCXXFLAGS'] = "$CXXFLAGS"
+    env['LINKCOM'] = '$LINK -o $TARGET $LINKFLAGS $( $_LIBDIRFLAGS $) $_LIBFLAGS $_PDB $SOURCES'
+    env['SHLINKCOM'] = '$LINK -o $TARGET $LINKFLAGS $( $_LIBDIRFLAGS $) $_LIBFLAGS $_PDB $SOURCES'
+    env['CCCOMFLAGS'] = "-c $CPPFLAGS $_CPPINCFLAGS $_CPPDEFFLAGS -o$TARGET $SOURCES $CCPCHFLAGS $CCPDBFLAGS"
+    env['ARCOM'] = "${TEMPFILE('$AR $ARFLAGS $TARGET $SOURCES')}"
+    env['_LIBFLAGS'] = "$LIBS"
+    if libpath:
+        env['LINKFLAGS'] += Split('--userlibpath "%s"' % ','.join(libpath))
+    env['CXXFLAGS'] = ["--cpp"]
+    env['SHLINKFLAGS'] = "$LINKFLAGS"
+    env['LIBPATH'] = []
+    env['TEMPFILEPREFIX'] = '--via='
+
+# compiler settings for non-s3e targets
+if compiler in gcc_variants or compiler == 'qcc':
+    env['PROGSUFFIX'] = ""
+
+# Set a sensible default number of jobs, unless the user has specified
+# a non-default number on the commandline.
+if GetOption('num_jobs') == 1:
+    # setup distcc where available
+    if compiler in gcc_variants and env['dist']:
+        # when doing parallel build use 2 * number of hosts as the numbre
+        # if parallel jobs
+        jobs = len(export_map['DISTCC_HOSTS'].split()) * 2
+        print "Performing parallel build with %d jobs" % jobs
+        SetOption('num_jobs', jobs)
+        env['LD']  =  env['CC']
+        env['CC']  = 'distcc %s' % env['CC']
+        env['CXX'] = 'distcc %s' % env['CXX']
+        if 'DMUCS_SERVER' in os.environ:
+            env['CC']  = 'gethost %s' % env['CC']
+            env['CXX'] = 'gethost %s' % env['CXX']
+            SetOption('num_jobs', 6)
+    elif compiler == 'rvct':
+        pass
+    else:
+        try:
+            # we still use python2.5 on win32 and multiprocessing is
+            # not available.
+            import multiprocessing
+            maxjobs = multiprocessing.cpu_count() * 2
+        except:
+            maxjobs = 2
+            if sys.platform == 'win32':
+                try:
+                    maxjobs = int(os.environ['NUMBER_OF_PROCESSORS']) * 2
+                except (ValueError, KeyError):
+                    pass
+        SetOption('num_jobs', maxjobs)
+
+
+def remove(env, setting, flag):
+    if flag in env[setting]:
+        new_settings = list(env[setting])
+        while flag in new_settings:
+            new_settings.remove(flag)
+        env[setting] = new_settings
+
+if env['profile']:
+    env.Append(CXXFLAGS="-pg", LINKFLAGS="-pg")
+
+#
+# this is the code the tells scons that we want all object files
+# to go in our build dir.  Otherwise the object files end up in
+# the same place as the source.
+#
+
+if not os.path.dirname(target_name):
+    target_name = join(builddir, target_name)
+
+nowarn_env = env.Clone()
+arm_env = env.Clone()
+thumb_env = env.Clone()
+vfp_env = env.Clone()
+
+if '-Wall' in nowarn_env['CCFLAGS'] or '-Wc,-Wall' in nowarn_env['CCFLAGS']:
+    nowarn_env['CCFLAGS'] = list(nowarn_env['CCFLAGS'])
+    remove(nowarn_env, 'CCFLAGS', '-Wall')
+    remove(nowarn_env, 'CCFLAGS', '-Wc,-Wall')
+    nowarn_env.Append(CCFLAGS='-w')
+
+
+if compiler != 'rvct':
+    #Replacing these with the working 'remove' code below caused
+    #issues replacing the '-mthumb' portion of -mthumb-interwork
+    remove(arm_env, 'CCFLAGS', '-mthumb')
+    remove(arm_env, 'CCFLAGS', '--thumb')
+    remove(arm_env, 'ASFLAGS', '-mthumb')
+    remove(arm_env, 'ASFLAGS', '--thumb')
+
+    remove(vfp_env, 'CCFLAGS', '-msoft-float')
+    remove(vfp_env, 'ASFLAGS', '-msoft-float')
+    remove(vfp_env, 'CCFLAGS', '-mthumb')
+    remove(vfp_env, 'CCFLAGS', '--thumb')
+
+    if '-mfpu=vfp' not in vfp_env['CCFLAGS']:
+        vfp_env.Append(CCFLAGS='-mfpu=vfp')
+    if '-mfpu=vfp' not in vfp_env['ASFLAGS']:
+        vfp_env.Append(ASFLAGS='-mfpu=vfp')
+
+if compiler == "rvct":
+    if '--thumb' not in thumb_env['CCFLAGS']:
+        thumb_env.Append(CCFLAGS='--thumb')
+        thumb_env.Append(ASFLAGS='--thumb')
+else:
+    if '-mthumb' not in thumb_env['CCFLAGS']:
+        thumb_env.Append(CCFLAGS='-mthumb')
+        thumb_env.Append(ASFLAGS='-mthumb')
+
+
+if env['verbose']:
+    print "CCFLAGS   = %s" % env['CCFLAGS']
+    print "CXXFLAGS  = %s" % env['CXXFLAGS']
+    #print "CPPFLAGS = %s" % env['CPPFLAGS']
+    print "LINKFLAGS = %s" % env['LINKFLAGS']
+    print "SHLINKFLAGS = %s" % env['SHLINKFLAGS']
+    print "CC        = %s" % env['CC']
+    print "CXX       = %s" % env['CXX']
+    if 'DISTCC_HOSTS' in env['ENV']:
+        print "DISTCC_HOSTS = %s" % env['ENV']['DISTCC_HOSTS']
+
+
+objectivec_env = env.Clone()
+objectivec_env.Append(CFLAGS=['-std=c99', '-x', 'objective-c'])
+
+objectivecpp_env = env.Clone()
+objectivecpp_env.Append(CXXFLAGS=['-x', 'objective-c++'])
+
+def get_env(source):
+    if source.endswith(".mm"):
+        return objectivecpp_env
+    if source.endswith(".m"):
+        return objectivec_env
+    flags = source_flags.get(source)
+    if flags:
+        if 'rvct' in flags and 'rvct' not in compiler:
+            return None
+        if 'gcc' in flags:
+            if "ARM" not in arch:
+                return None
+            if 'gcc' not in compiler and 'qcc' not in compiler:
+                return None
+
+        if 'gccnowarn' in flags:
+            return nowarn_env
+        if 'vfp' in flags:
+            return vfp_env
+        if 'arm' in flags:
+            return arm_env
+        if 'thumb' in flags:
+            return thumb_env
+    return env
+
+shared_objects = []
+objects = []
+objnames = []
+for module in modules:
+    for source in modules[module]:
+        basename = os.path.basename(source)
+        objname = os.path.splitext(basename)[0]
+        objname = join(builddir, objname)
+        if objname in objnames:
+            i = 1
+            orig = objname
+            while objname in objnames:
+                objname = orig + ("_%s" % i)
+                i += 1
+        objnames.append(objname)
+        use_env = get_env(source)
+        if use_env:
+            objects.append(use_env.Object(objname, source))
+            shared_objects.append(use_env.SharedObject(objname, source))
+
+lib_build_targets=[]
+libs = []
+for lib in build_libs:
+    objs = []
+    libname = os.path.basename(lib)
+    if libname in libraries:
+        libraries.remove(libname)
+    for source in build_libs[lib]:
+        basename = os.path.basename(source)
+        objname = os.path.splitext(basename)[0]
+        objname = join(builddir, "lib_" + os.path.basename(lib), objname)
+        use_env = get_env(source)
+        obj = use_env.Object(objname, source)
+        objs.append(obj)
+    library = env.Library(lib, objs)
+    env.Default(library)
+    libs.append(library)
+    if os.name == 'nt':
+        library = str(library[0]).replace('\\', '/')
+    lib_build_targets.append(library)
+
+libs = []
+for l in libraries:
+    if compiler == 'rvct':
+        if os.name == 'posix':
+            l = l.replace("(", "\(")
+            l = l.replace(")", "\)")
+    else:
+        # if we not using the arm compiler we strip of any extenation on library names
+        base, ext = os.path.splitext(l)
+        if ext in ['.lib', '.a']:
+            l = base
+    libs.append(l)
+
+libraries = libs
+
+env.Append(LIBS=libraries + lib_build_targets )
+
+#
+# Declare a program target for this project.
+#
+
+program = env.Program(join(builddir, 's3eGooglePlayGames_android.prog'), objects + extra_objects)
+env.Depends(program, temp_defines)
+
+#
+# Declare a shared library target for this project.
+#
+
+shared_library = env.SharedLibrary(target_name, shared_objects + extra_objects)
+env.Depends(shared_library, temp_defines)
+
+#
+# Declare a static library target for this project.
+#
+
+static_library = env.Library('s3eGooglePlayGames_android', objects + extra_objects)
+env.Depends(static_library, temp_defines)
+
+#
+# Declare the *default* target(s) for this build
+#
+
+env['MAXLINELENGTH']=4096
+
+default_target = shared_library
+if default_target:
+    env.Default(default_target)
+    env.Depends(default_target, temp_defines)
+
+    # Uncoment this if you always want to link the final target
+    #env.AlwaysBuild(default_target)
+
+if compiler in ['rvct', 'msvc', 'i686-linux-android-gcc']:
+    strip = 0
+
+if strip:
+    env.AddPostAction(default_target, env.Action('$STRIP $STRIPFLAGS "%s"' % default_target[0].abspath))
