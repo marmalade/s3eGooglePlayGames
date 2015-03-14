@@ -120,7 +120,7 @@ s3eResult s3eGooglePlayGamesInit_platform()
     IwTrace(GOOGLEPLAYGAMES, ("GOOGLEPLAYGAMES init success"));
     g_Obj = env->NewGlobalRef(obj);
     env->DeleteLocalRef(obj);
-    env->DeleteGlobalRef(cls);
+    env->DeleteLocalRef(cls);
 
     // Add any platform-specific initialisation code here
     return S3E_RESULT_SUCCESS;
